@@ -93,24 +93,6 @@ void Distribute (uint3 id : SV_DispatchThreadID)
     float3 centerUV = (uv1 + uv2 + uv3) * 0.333f;
     float vertexAllowScatter = centerUV.z;
     
-    // Get the biome colour
-    float3 biome = biomeMap.SampleLevel(pointClampSampler, centerUV.xy, 0).rgb;
-
-    // Does this biome colour match any of the biomes this scatter can appear in?
-    int biomesEligible = 0;
-    for (int b = 0; b < _NumberOfBiomes; b++)
-    {
-        // + 0.5 to move sample position to the center of the pixel
-        float3 biomeColor = scatterBiomes.SampleLevel(pointClampSampler, float2(0.5f, ((float)b + 0.5f) / (float) _NumberOfBiomes), 0).rgb;
-        biomesEligible += BiomeEligible(biome, biomeColor);
-    }
-    
-    // Skip this triangle if this scatter isn't eligible on it
-    if (biomesEligible == 0)
-    {
-        return;
-    }
-    
     // Don't place scatters on ineligible gradients, such as mountains
     float slope = CalculateSlope(averageNormal);
     if (slope < 0.025)
