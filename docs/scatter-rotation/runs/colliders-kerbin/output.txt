@@ -1,0 +1,26 @@
+load-00  UT    44430.6  directRotAngle   90.4146  InverseRotAngle   21.8340
+warp-01  UT    45033.0  directRotAngle   90.4146  InverseRotAngle   31.8960
+load-01  UT    44430.7  directRotAngle   80.1187  InverseRotAngle   32.1306
+warp-02  UT    45033.0  directRotAngle   80.1187  InverseRotAngle   42.1933
+load-02  UT    44430.7  directRotAngle   69.8218  InverseRotAngle   42.4275
+warp-03  UT    45033.1  directRotAngle   69.8218  InverseRotAngle   52.4906
+load-03  UT    44430.7  directRotAngle   59.5242  InverseRotAngle   52.7248
+warp-04  UT    45033.0  directRotAngle   59.5242  InverseRotAngle   62.7868
+load-04  UT    44430.6  directRotAngle   49.2283  InverseRotAngle   63.0200
+warp-05  UT    45032.9  directRotAngle   49.2283  InverseRotAngle   73.0821
+load-05  UT    44430.7  directRotAngle   38.9337  InverseRotAngle   73.3153
+warp-06  UT    45033.0  directRotAngle   38.9337  InverseRotAngle   83.3784
+load-06  UT    44430.7  directRotAngle   28.6367  InverseRotAngle   83.6126
+warp-07  UT    45033.1  directRotAngle   28.6367  InverseRotAngle   93.6756
+load-07  UT    44430.7  directRotAngle   18.3395  InverseRotAngle   93.9109
+warp-08  UT    45033.2  directRotAngle   18.3395  InverseRotAngle  103.9746
+load-08  UT    44430.7  directRotAngle    8.0408  InverseRotAngle  104.2082
+warp-09  UT    45033.0  directRotAngle    8.0408  InverseRotAngle  114.2709
+load-09  UT    44430.7  directRotAngle   -2.2555  InverseRotAngle  114.5045
+warp-10  UT    45033.0  directRotAngle   -2.2555  InverseRotAngle  124.5672
+load-10  UT    44430.8  directRotAngle  -12.5521  InverseRotAngle  124.8034
+warp-11  UT    45033.2  directRotAngle  -12.5521  InverseRotAngle  134.8669
+load-11  UT    44430.8  directRotAngle  -22.8518  InverseRotAngle  135.1038
+warp-12  UT    45033.2  directRotAngle  -22.8518  InverseRotAngle  145.1661
+load-12  UT    44430.7  directRotAngle  -33.1507  InverseRotAngle  145.4000
+done: 25 readings, in C:\Users\lhervier\AppData\Local\Temp\claude\c--Users-lhervier-Perso-kspmod-KSP-ExtMod-ParallaxContinued\899cf80e-bb1f-40c5-a74f-80bdbd5fe940\scratchpad\run-colliders\kerbin

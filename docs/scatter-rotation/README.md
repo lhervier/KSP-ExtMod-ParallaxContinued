@@ -36,9 +36,9 @@ Nothing else moves: the place, the size and the choice of each object are comput
 
 ## Non-regression tests
 
-**What the change has been checked against, each test with its save, its script and its result, on
-Parallax Continued 1.0.4 as players have it, without the change and with it.** Complete: the rocks
-around a craft, on the Mun and on Eve.
+**Whether the change breaks anything else in the game, each test with its save, its script and its
+result, on Parallax Continued 1.0.4 as players have it.** Complete: the colliders on the scatter, on the
+Mun, on Eve and on Kerbin: with the change, they stay on the objects drawn, load after load.
 
 **→ Full page: [Non-regression tests](non-regression.md)**
 

@@ -79,10 +79,13 @@ load, as on Eve: [What changes at every load all the same](#what-changes-at-ever
 twelve times over, with a screenshot before and after each load and the line of Diag Floating Origin at
 each of them; it stops if the warp did not move the time on, or if the kerbal moved after a load. On Eve:
 `--save rocks-eve-jeb --radius 700000`; on Kerbin: `--save cacti-kerbin --radius 600000 --step 600
---distance 80`. The screenshots are the result: the runs of the Mun and of Eve are in
-[The rocks around a craft](non-regression.md#the-rocks-around-a-craft), those of Kerbin in
-[`runs/cacti-kerbin/`](runs/cacti-kerbin/): played on both builds, the kerbal `LANDED` where the save
-left him, within 6 mm.
+--distance 80`. The screenshots are the result: the runs are in
+[`runs/rocks-mun-jeb/`](runs/rocks-mun-jeb/), [`runs/rocks-eve-jeb/`](runs/rocks-eve-jeb/) and
+[`runs/cacti-kerbin/`](runs/cacti-kerbin/), each with a `release/` and a `change/` folder: the
+screenshots (`load-NN` after each load, `warp-NN` before it), the line of Diag Floating Origin at each of
+them (`readings.json`), what the script printed (`output.txt`) and the `KSP.log` of the session. On every
+run, the time warp alone turns nothing (`warp-NN` against `load-NN` before it), and the kerbal stays
+`LANDED` where the save left him, within 6 mm.
 
 ## With the change, the rocks hold still
 
@@ -120,9 +123,8 @@ and the white plant that shows on some loads only, are there without the change 
 [MP4](runs/cacti-kerbin/change/cacti-kerbin-change.mp4). The texture of the ground slides at every load,
 as with the release: [What changes at every load all the same](#what-changes-at-every-load-all-the-same).*
 
-**By script**: the same script, KSP started with the release + change build. The runs are next to those
-on the release: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) for the Mun and
-Eve, [`runs/cacti-kerbin/`](runs/cacti-kerbin/) for Kerbin.
+**By script**: the same script, KSP started with the release + change build. The runs are in the
+`change/` folder next to each `release/` one.
 
 ## What changes at every load all the same
 
@@ -165,7 +167,7 @@ does so on the release as well; there, it is harder to see, as the whole grove a
 
 ![With the change, the grove at loads 1, 2 and 3: nothing has turned, and the same white plant shows at load 2 only](runs/eve-what-still-changes/plant-change.jpg)
 
-*Crops of the screenshots of [The rocks around a craft](non-regression.md#the-rocks-around-a-craft).*
+*Crops of the screenshots of the runs of Eve, [`runs/rocks-eve-jeb/`](runs/rocks-eve-jeb/).*
 
 **This plant follows the ground of stock KSP.** Parallax Continued decides where each object of its
 scatter grows from the mesh of the terrain quad (`Distribute`), and stock KSP builds that mesh a little

@@ -111,7 +111,7 @@ body with a non-uniform scale would break that assumption
 - **At the first load with the change**, every object takes a new orientation, tied to its quad. A
   craft saved on a rock, or right next to one, with Parallax as released can then start inside it, once:
   the same as at any load of the release, where every rock already comes back turned by the time played
-  since the save ([Non-regression tests](non-regression.md#a-save-made-with-the-release-loaded-with-the-change)).
+  since the save ([Non-regression tests](non-regression/a-save-made-with-the-release.md)).
 - **The south pole stays where `FromToRotation` has no single answer**: `FromToRotation(up, n)` has no
   single answer when the normal points straight down the `up` axis. Without the change, `up` is the axis
   of the scene, which is the body's axis of rotation; with it, the Y axis of the quad, which KSP does not

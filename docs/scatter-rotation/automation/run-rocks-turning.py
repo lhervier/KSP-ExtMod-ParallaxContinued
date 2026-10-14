@@ -18,6 +18,9 @@ folder, for instance) into the folder of a sandbox game, then run:
 
 With --step 0, it skips step 2: the save is loaded again at once, with no time played in between.
 
+With --heading and --pitch, the camera looks at the craft from the side rather than from straight above: to
+see the colliders KSP Diag - Colliders draws in colour on the rocks next to a craft standing among them.
+
 The camera keeps its heading from north whatever the craft does, so the edges of the terrain quads, which KSP
 Diag - Colliders draws in grey, stay at the same place in every screenshot: what moved in the picture is what
 turned on the ground. It writes every line of KSP Diag - Floating Origin to readings.json, prints the angle the
@@ -78,11 +81,14 @@ class Run:
         self.readings = []
 
     def view(self, name):
-        """Takes the screenshot from straight above the craft, the windows and the interface hidden."""
+        """Takes the screenshot of the craft from --distance, --heading and --pitch (straight above by default),
+        the windows and the interface hidden."""
         call("colliders_show_window", visible=False)
+        # The colliders drawn hidden by what stands in front of them, so that they show on the rocks.
+        call("colliders_set_display", mode=0)
         call("floatingorigin_show_window", visible=False)
         call("set_ui", visible=False)
-        call("set_camera", distance=self.options.distance, pitch=89, heading=0)
+        call("set_camera", distance=self.options.distance, pitch=self.options.pitch, heading=self.options.heading)
         call("wait", seconds=2)
         call("screenshot", path=os.path.join(self.out, name + ".png"), return_image=False)
 
@@ -113,7 +119,12 @@ def main():
                              "save again at once, without warp-NN screenshots")
     parser.add_argument("--settle", type=float, default=10.0,
                         help="how long to let the craft settle after each load, in seconds (default 10)")
-    parser.add_argument("--distance", type=float, default=40.0, help="the height of the camera, in metres")
+    parser.add_argument("--distance", type=float, default=40.0,
+                        help="the distance of the camera from the craft, in metres (default 40)")
+    parser.add_argument("--heading", type=float, default=0.0,
+                        help="the direction the camera looks in, in degrees from north towards east (default 0)")
+    parser.add_argument("--pitch", type=float, default=89.0,
+                        help="how far the camera looks down, in degrees (default 89: straight above the craft)")
     parser.add_argument("--radius", type=float, default=200000.0,
                         help="the radius of the body, in metres, to tell how far the craft moved (default: the Mun)")
     parser.add_argument("--out", default="out", help="where readings.json and the screenshots go")

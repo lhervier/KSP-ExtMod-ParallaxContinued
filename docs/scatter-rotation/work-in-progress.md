@@ -47,13 +47,13 @@ body turns in the scene, and when the craft comes back down, it is held still ag
 without any load. Without the change, the rocks drawn turn with that angle at once. A change of sphere of
 influence goes through the same switch.
 
-**To play**: from the save of [The rocks around a craft](non-regression.md#the-rocks-around-a-craft), a screenshot from
+**To play**: from a save of [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load), a screenshot from
 above; then the craft put on an orbit above 100 km with *Set Orbit* of the `Alt+F12` menu, some time in
 orbit, and put back where it stood with *Set Position*; the same screenshot. Diag Floating Origin shows
 the frame go to `Inertial` and back to `Rotating`, and `directRotAngle` move. On both builds.
 
 **Script**: `set_orbit`, `wait` or `warp_to`, `set_position`, then the screenshots of
-[The rocks around a craft](non-regression.md#the-rocks-around-a-craft).
+[The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load).
 
 **Where it stands**: not played. That the body is held still again at another angle is read in the code
 of KSP, not seen.
@@ -74,7 +74,7 @@ the normal, in `float`, which can move it slightly.
 grow, and the same at the north pole, where nothing degenerates; both builds; screenshots from above and
 from the side, with Diag Colliders, and a few seconds of video to see whether anything spins.
 
-**Script**: `set_position`, then the steps of [The rocks around a craft](non-regression.md#the-rocks-around-a-craft).
+**Script**: `set_position`, then the steps of [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load).
 
 **Where it stands**: not played.
 
@@ -87,14 +87,15 @@ stretched or tilted, or their colliders would part from them.
 its axes: it assumes the scale of a quad is the same along its three axes. Sigma Dimensions changes the
 size of the bodies, and Parallax Continued has code of its own for it.
 
-**To play**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) and
+**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load),
+[The colliders on the scatter](non-regression/the-colliders-on-the-scatter.md) and
 [A kerbal on a rock](#a-kerbal-on-a-rock) on the Mun rescaled by Sigma Dimensions, on both builds.
 
 **Where it stands**: not played. Sigma Dimensions is still to try.
 
 ## A kerbal on a rock
 
-**What it adds**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) shows that the rocks turn at a
+**What it adds**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load) shows that the rocks turn at a
 load, and so that what stands on one is put back elsewhere. This test looks at that consequence: a kerbal
 standing on a rock is moved at a load without the change, and put back where he was with it.
 
@@ -150,7 +151,7 @@ Played on both builds, on the Mun and on Eve.
 **Script**: `automation/run-kerbal-on-a-rock.py`, to write: twelve loads after an hour of time warp
 each, then KSP started again and twelve loads more; at each load, Diag Floating Origin, Diag Landed Vessel
 and Diag Terrain Height recorded once the digits stop moving, and a view of the kerbal. Tools of
-KSP-MCPServer as in [The rocks around a craft](non-regression.md#the-rocks-around-a-craft), and `quit_game`; of the
+KSP-MCPServer as in [`run-rocks-turning.py`](automation/run-rocks-turning.py), and `quit_game`; of the
 instruments: `landedvessel_read`, `landedvessel_record`, `terrainheight_record`. Starting KSP again is up
 to the script, outside the server.
 
@@ -172,7 +173,8 @@ compute shader. The change is in the HLSL source, translated to GLSL by Unity: a
 result to see. KSP started with `-force-glcore` on Windows loads the same bundle. Proton presents itself
 as Windows and loads the `-windows` bundle, the one of the other tests.
 
-**To play**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) and
+**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load),
+[The colliders on the scatter](non-regression/the-colliders-on-the-scatter.md) and
 [A kerbal on a rock](#a-kerbal-on-a-rock), on Linux, on both builds.
 
 **Script**: the same scripts, once KSP-MCPServer and the instruments are checked on Linux.

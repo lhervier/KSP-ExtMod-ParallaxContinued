@@ -1,0 +1,26 @@
+load-00  UT    60236.8  directRotAngle   83.0010  InverseRotAngle  186.3809
+warp-01  UT    63839.2  directRotAngle   83.0010  InverseRotAngle  202.4911
+load-01  UT    60236.8  directRotAngle   66.8261  InverseRotAngle  202.5559
+warp-02  UT    63839.3  directRotAngle   66.8261  InverseRotAngle  218.6663
+load-02  UT    60236.8  directRotAngle   50.6508  InverseRotAngle  218.7313
+warp-03  UT    63839.3  directRotAngle   50.6508  InverseRotAngle  234.8416
+load-03  UT    60236.8  directRotAngle   34.4757  InverseRotAngle  234.9064
+warp-04  UT    63839.3  directRotAngle   34.4757  InverseRotAngle  251.0168
+load-04  UT    60236.8  directRotAngle   18.3005  InverseRotAngle  251.0813
+warp-05  UT    63839.2  directRotAngle   18.3005  InverseRotAngle  267.1916
+load-05  UT    60236.8  directRotAngle    2.1257  InverseRotAngle  267.2561
+warp-06  UT    63839.2  directRotAngle    2.1257  InverseRotAngle  283.3661
+load-06  UT    60236.8  directRotAngle  -14.0488  InverseRotAngle  283.4309
+warp-07  UT    63839.3  directRotAngle  -14.0488  InverseRotAngle  299.5412
+load-07  UT    60236.8  directRotAngle  -30.2241  InverseRotAngle  299.6060
+warp-08  UT    63839.2  directRotAngle  -30.2241  InverseRotAngle  315.7161
+load-08  UT    60236.8  directRotAngle  -46.3988  InverseRotAngle  315.7807
+warp-09  UT    63839.2  directRotAngle  -46.3988  InverseRotAngle  331.8910
+load-09  UT    60236.8  directRotAngle  -62.5737  InverseRotAngle  331.9556
+warp-10  UT    63839.2  directRotAngle  -62.5737  InverseRotAngle  348.0659
+load-10  UT    60236.8  directRotAngle  -78.7485  InverseRotAngle  348.1304
+warp-11  UT    63839.2  directRotAngle  -78.7485  InverseRotAngle    4.2405
+load-11  UT    60236.9  directRotAngle  265.0767  InverseRotAngle    4.3057
+warp-12  UT    63839.3  directRotAngle  265.0767  InverseRotAngle   20.4160
+load-12  UT    60236.8  directRotAngle  248.9011  InverseRotAngle   20.4809
+done: 25 readings, in C:\Users\lhervier\AppData\Local\Temp\claude\c--Users-lhervier-Perso-kspmod-KSP-ExtMod-ParallaxContinued\899cf80e-bb1f-40c5-a74f-80bdbd5fe940\scratchpad\run-colliders\eve
