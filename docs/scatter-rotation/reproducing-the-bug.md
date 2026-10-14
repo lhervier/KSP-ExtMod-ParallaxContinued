@@ -2,7 +2,8 @@
 
 Part of [Scatter rotation](README.md): the protocol that shows the bug on Parallax Continued 1.0.4, the
 rocks seen from above around a kerbal standing a few metres from them, played by hand and by a script;
-then what it does to a craft standing on a rock.
+the same protocol with the change, where the rocks hold still; then what the bug does to a craft standing
+on a rock.
 
 ## The rocks turn at every load
 
@@ -49,6 +50,30 @@ twelve times over, with a screenshot before and after each load and the line of 
 each of them; it stops if the warp did not move the time on, or if the kerbal moved after a load. The
 screenshots are the result: a run on each build is in
 [Work in progress](work-in-progress.md#the-rocks-around-a-craft).
+
+## With the change, the rocks hold still
+
+**The install**: the same, with the **release + change** build
+([The builds and the install](README.md#the-builds-and-the-install)). **The save**: the same,
+[`rocks-mun-jeb.sfs`](saves/rocks-mun-jeb.sfs).
+
+Play the steps of [The rocks turn at every load](#the-rocks-turn-at-every-load) again. At step 4, and at
+every load after it, `directRotAngle` moves as before, by the angle the Mun turns in an hour: KSP still
+turns the Mun in the scene at each load. The rocks no longer follow it: every cluster is where it was at
+step 2, turned the same way, load after load. Only the fine shading of the ground and of the rocks changes
+by a few levels of grey from one screenshot to the next.
+
+The first screenshot does not show the rocks as the release does: the change gives every rock another
+orientation, tied to its terrain quad, once, and keeps it at every load after
+([What the change does](the-change.md#what-the-change-does)).
+
+![Twelve loads of the same save with the change, an hour of time warp before each: the rocks, the ground, the grey edges of the quads and the kerbal at the centre hold still](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.gif)
+
+*Release + change: the same screenshots as above, from the same save, the Mun turned by 112° in the scene
+in all. Full size: [MP4](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.mp4).*
+
+**By script**: the same script, KSP started with the release + change build. The run is in
+[Work in progress](work-in-progress.md#the-rocks-around-a-craft), next to the one on the release.
 
 ## What it does to a craft
 

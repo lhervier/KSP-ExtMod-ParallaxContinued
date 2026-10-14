@@ -18,7 +18,8 @@ change, and that every protocol below gives what it says on your own install.
 **A kerbal standing on the Mun a few metres from the rocks, the same save loaded again after an hour of
 time warp: every cluster of rocks has turned on its own centre, by the angle the Mun has turned in that
 hour, while the ground and the kerbal have not.** A craft standing on a rock, or right next to one, then
-starts elsewhere on it, or inside it, and can be thrown off.
+starts elsewhere on it, or inside it, and can be thrown off. With the change, the same protocol shows
+the rocks holding still, load after load.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
