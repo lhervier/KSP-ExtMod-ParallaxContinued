@@ -1,9 +1,11 @@
 # Reproducing the bug
 
 Part of [Scatter rotation](README.md): the protocol that shows the bug on Parallax Continued 1.0.4, the
-rocks seen from above around a kerbal standing a few metres from them, played by hand and by a script;
-the same protocol with the change, where the rocks hold still; what still changes on Eve from one load to
-the next, with the change as without it, and does not come from this bug; then what the bug does to a
+rocks seen from above around a kerbal standing a few metres from them, played by hand and by a script,
+on the Mun, on Eve, and on Kerbin with a cluster of cacti that stand along the radius of the body;
+the same protocol with the change, where the rocks and the cacti hold still; what still changes from one
+load to the next, with the change as without it, and does not come from this bug: the texture of the
+ground, and a plant on Eve; then what the bug does to a
 craft standing on a rock.
 
 ## The rocks turn at every load
@@ -55,24 +57,45 @@ game time. At each load the rocks and the plants turn, each on itself.
 *The release on Eve: the same screenshots, Eve turned by 194° in the scene in all; it is dusk where the
 kerbal stands. Full size: [MP4](runs/rocks-eve-jeb/release/rocks-eve-jeb-release.mp4). Small pebbles
 that seem to come and go, and a white plant that shows on some loads only, do not come from this bug:
-[On Eve, what changes at every load all the same](#on-eve-what-changes-at-every-load-all-the-same).*
+[What changes at every load all the same](#what-changes-at-every-load-all-the-same).*
+
+**On Kerbin**, with [`cacti-kerbin.sfs`](saves/cacti-kerbin.sfs): the same kerbal in the desert, some
+40 m from a cluster of cacti. The rocks of the Mun and of Eve are laid on the slope of the ground; the
+trees, the cacti and the icebergs of Kerbin, among others, stand along the radius of the body
+(`alignToTerrainNormal = False` in their config), the other way the code orients an object, and the bug
+turns them too. A cluster of cacti (`LargeCactiCluster`, `MedCactiCluster`, `SmallCactiCluster`) is
+drawn as one object, and turns on itself as plainly as a cluster of rocks. Kerbin turns once in
+21,549 s, 60.1° for an hour of game time: at step 3, ten minutes of time warp rather than an hour, 10°
+at each load, near the 9.3° of the Mun. At 60° a load, the cluster is seen to move, not to turn.
+
+![Twelve loads of the same save of Kerbin on the release, ten minutes of time warp before each: the cluster of cacti at the bottom turns on itself a little more at every load, while the kerbal at the centre holds still](runs/cacti-kerbin/release/cacti-kerbin-release.gif)
+
+*The release on Kerbin: the same screenshots, ten minutes of time warp before each load, Kerbin turned by
+123.5° in the scene in all; the cluster of cacti is at the bottom. Full size:
+[MP4](runs/cacti-kerbin/release/cacti-kerbin-release.mp4). The texture of the ground slides at every
+load, as on Eve: [What changes at every load all the same](#what-changes-at-every-load-all-the-same).*
 
 **By script**: [`automation/run-rocks-turning.py`](automation/run-rocks-turning.py). Steps 1 to 5,
 twelve times over, with a screenshot before and after each load and the line of Diag Floating Origin at
 each of them; it stops if the warp did not move the time on, or if the kerbal moved after a load. On Eve:
-`--save rocks-eve-jeb --radius 700000`. The screenshots are the result: the runs are in
-[The rocks around a craft](non-regression.md#the-rocks-around-a-craft).
+`--save rocks-eve-jeb --radius 700000`; on Kerbin: `--save cacti-kerbin --radius 600000 --step 600
+--distance 80`. The screenshots are the result: the runs of the Mun and of Eve are in
+[The rocks around a craft](non-regression.md#the-rocks-around-a-craft), those of Kerbin in
+[`runs/cacti-kerbin/`](runs/cacti-kerbin/): played on both builds, the kerbal `LANDED` where the save
+left him, within 6 mm.
 
 ## With the change, the rocks hold still
 
 **The install**: the same, with the **release + change** build
 ([The builds and the install](README.md#the-builds-and-the-install)). **The saves**: the same,
-[`rocks-mun-jeb.sfs`](saves/rocks-mun-jeb.sfs) and [`rocks-eve-jeb.sfs`](saves/rocks-eve-jeb.sfs).
+[`rocks-mun-jeb.sfs`](saves/rocks-mun-jeb.sfs), [`rocks-eve-jeb.sfs`](saves/rocks-eve-jeb.sfs) and
+[`cacti-kerbin.sfs`](saves/cacti-kerbin.sfs).
 
 Play the steps of [The rocks turn at every load](#the-rocks-turn-at-every-load) again. At step 4, and at
 every load after it, `directRotAngle` moves as before, by the angle the Mun turns in an hour: KSP still
 turns the Mun in the scene at each load. The rocks no longer follow it: every cluster is where it was at
-step 2, turned the same way, load after load; on Eve, the plants as well. Only the fine shading of the ground and of the rocks changes
+step 2, turned the same way, load after load; on Eve, the plants as well; on Kerbin, the cluster of
+cacti, none of them leaning. Only the fine shading of the ground and of the rocks changes
 by a few levels of grey from one screenshot to the next.
 
 The first screenshot does not show the rocks as the release does: the change gives every rock another
@@ -89,28 +112,43 @@ in all. Full size: [MP4](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.mp4).*
 *Release + change on Eve, Eve turned by 194° in the scene in all. Full size:
 [MP4](runs/rocks-eve-jeb/change/rocks-eve-jeb-change.mp4). The small pebbles that seem to come and go,
 and the white plant that shows on some loads only, are there without the change too:
-[On Eve, what changes at every load all the same](#on-eve-what-changes-at-every-load-all-the-same).*
+[What changes at every load all the same](#what-changes-at-every-load-all-the-same).*
 
-**By script**: the same script, KSP started with the release + change build. The runs are in
-[The rocks around a craft](non-regression.md#the-rocks-around-a-craft), next to those on the release.
+![Twelve loads of the same save of Kerbin with the change, ten minutes of time warp before each: the cluster of cacti at the bottom and the kerbal at the centre hold still](runs/cacti-kerbin/change/cacti-kerbin-change.gif)
 
-## On Eve, what changes at every load all the same
+*Release + change on Kerbin, Kerbin turned by 123.5° in the scene in all. Full size:
+[MP4](runs/cacti-kerbin/change/cacti-kerbin-change.mp4). The texture of the ground slides at every load,
+as with the release: [What changes at every load all the same](#what-changes-at-every-load-all-the-same).*
 
-With the change, nothing turns any more on Eve. Two things still change from one load to the next, with
-the change as with the release, even when the same save is loaded again at once, with no time played.
-Neither comes from this bug, and the change does not touch them.
+**By script**: the same script, KSP started with the release + change build. The runs are next to those
+on the release: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) for the Mun and
+Eve, [`runs/cacti-kerbin/`](runs/cacti-kerbin/) for Kerbin.
 
-**The small pebbles are drawn in the texture of the ground, and that texture slides.** What looks like
-small pebbles coming and going between two screenshots is not objects of the scatter: the terrain shader
-of Parallax Continued paints them in the texture of the ground. It places that texture from the position
-of each point in the Unity scene, `(worldPos + _TerrainShaderOffset) * _Tiling` (`BiplanarFunctions.cginc`).
-KSP turns the body in the scene again at every load ([Why the rocks turn](the-change.md#why-the-rocks-turn)),
-so the same point of the ground comes back at another place in the scene, and the texture comes back slid
-along the ground. Loading the same save again straight away is enough: Eve turns by a few hundredths of a
-degree in the scene, and a point of its ground moves by hundreds of metres in it. The same thing happens on
-the Mun, where the texture of the ground has no such pebbles and only its fine shading changes. It is the
-same kind of defect as the rocks that turn, a texture tied to the scene rather than to the body, in the
-terrain shader, and only seen: the ground the physics uses does not move. It may deserve its own change.
+## What changes at every load all the same
+
+With the change, nothing turns any more. Two things still change from one load to the next, with the
+change as with the release, even when the same save is loaded again at once, with no time played: the
+texture of the ground, on every body, and, on Eve, a plant that shows on some loads only. Neither comes
+from this bug, and the change does not touch them.
+
+**The texture of the ground slides.** The terrain shader of Parallax Continued places the texture of
+the ground from the position of each point in the Unity scene, `(worldPos + _TerrainShaderOffset) *
+_Tiling` (`BiplanarFunctions.cginc`). KSP turns the body in the scene again at every load
+([Why the rocks turn](the-change.md#why-the-rocks-turn)), so the same point of the ground comes back at
+another place in the scene, and the texture comes back slid along the ground. Loading the same save again
+straight away is enough: Eve turns by a few hundredths of a degree in the scene, and a point of its ground
+moves by hundreds of metres in it. How it shows depends on the texture:
+
+- on the Mun, only the fine shading of the ground changes;
+- on Eve, light grains painted in the texture look like small pebbles coming and going (below);
+- on Kerbin, the whole ground of the desert is seen sliding from one picture to the next, in the
+  animations of [The rocks turn at every load](#the-rocks-turn-at-every-load) and
+  [With the change, the rocks hold still](#with-the-change-the-rocks-hold-still): Kerbin turns by 10°
+  between two of them, and a point of its ground moves by some 100 km in the scene.
+
+It is the same kind of defect as the rocks that turn, a texture tied to the scene rather than to the
+body, in the terrain shader, and only seen: the ground the physics uses does not move. It may deserve its
+own change.
 
 ![The same place on Eve at a load, and after the same save is loaded again at once: the rocks have not moved, the light grains painted on the ground are no longer the same](runs/eve-what-still-changes/ground-texture.jpg)
 

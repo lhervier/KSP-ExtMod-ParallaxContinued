@@ -18,9 +18,11 @@ change, and that every protocol below gives what it says on your own install.
 **A kerbal standing on the Mun a few metres from the rocks, the same save loaded again after an hour of
 time warp: every cluster of rocks has turned on its own centre, by the angle the Mun has turned in that
 hour, while the ground and the kerbal have not.** A craft standing on a rock, or right next to one, then
-starts elsewhere on it, or inside it, and can be thrown off. With the change, the same protocol shows
-the rocks holding still, load after load. On Eve, the texture of the ground and a plant here and there
-still change at every load, with the change as without it: they do not come from this bug.
+starts elsewhere on it, or inside it, and can be thrown off. On Kerbin, a cluster of cacti, which
+stand along the radius of the body rather than on the slope of the ground, turns the same way. With the
+change, the same protocol shows the rocks and the cacti holding still, load after load. The texture of
+the ground, on every body, and a plant here and there on Eve still change at every load, with the change
+as without it: they do not come from this bug.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
@@ -42,7 +44,7 @@ around a craft, on the Mun and on Eve.
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the floating origin and the frame switch; the trees of Kerbin, the south pole, Sigma
+**What is still to check before the change can be offered: the floating origin and the frame switch; the south pole, Sigma
 Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
 change broke it, and how to play it.
 

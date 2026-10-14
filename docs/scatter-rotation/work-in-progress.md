@@ -11,7 +11,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 - **When the floating origin moves** — the rocks and their colliders move with it, together.
 - **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
   in the scene without any load.
-- **The scatters along the radius: the trees of Kerbin** — the other branch of `alignToTerrainNormal`.
 - **The south pole** — where `FromToRotation` has no single answer, without the change and with it.
 - **Sigma Dimensions** — a body of another size, and quads of another scale.
 - **A kerbal on a rock** — the consequence of the rocks that turn: a kerbal saved on a rock, loaded
@@ -58,24 +57,6 @@ the frame go to `Inertial` and back to `Rotating`, and `directRotAngle` move. On
 
 **Where it stands**: not played. That the body is held still again at another angle is read in the code
 of KSP, not seen.
-
-## The scatters along the radius: the trees of Kerbin
-
-**If the change broke it**: the trees, and the other objects that stand along the radius of the body
-rather than on the slope of the ground, would lean, turn at every load, or have their colliders apart
-from what is drawn.
-
-**Why**: with `alignToTerrainNormal = False`, the normal is the direction of the body's centre, not the
-terrain's: the other branch of the code, which the change also brings into the quad's frame. The stock
-configs set it on Kerbin, Laythe and Eve, with colliders on Kerbin and Laythe.
-
-**To play**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) on Kerbin, a craft standing among
-trees, seen from the side as well as from above: a tree leaning shows from the side.
-
-**Script**: `automation/run-rocks-turning.py`, with another save and another view; `trees-kerbin.sfs`
-to make.
-
-**Where it stands**: not played.
 
 ## The south pole
 

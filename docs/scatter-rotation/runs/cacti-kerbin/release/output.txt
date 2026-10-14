@@ -1,0 +1,26 @@
+load-00  UT    44398.0  directRotAngle -140.2738  InverseRotAngle  251.9765
+warp-01  UT    45000.3  directRotAngle -140.2738  InverseRotAngle  262.0393
+load-01  UT    44397.3  directRotAngle -150.5698  InverseRotAngle  262.2608
+warp-02  UT    44999.5  directRotAngle -150.5698  InverseRotAngle  272.3222
+load-02  UT    44398.0  directRotAngle -160.8527  InverseRotAngle  272.5564
+warp-03  UT    45000.3  directRotAngle -160.8527  InverseRotAngle  282.6184
+load-03  UT    44398.1  directRotAngle -171.1490  InverseRotAngle  282.8547
+warp-04  UT    45000.5  directRotAngle -171.1490  InverseRotAngle  292.9174
+load-04  UT    44397.9  directRotAngle -181.4492  InverseRotAngle  293.1509
+warp-05  UT    45000.2  directRotAngle -181.4492  InverseRotAngle  303.2130
+load-05  UT    44398.0  directRotAngle -191.7429  InverseRotAngle  303.4469
+warp-06  UT    45000.4  directRotAngle -191.7429  InverseRotAngle  313.5089
+load-06  UT    44398.0  directRotAngle -202.0401  InverseRotAngle  313.7428
+warp-07  UT    45000.3  directRotAngle -202.0401  InverseRotAngle  323.8046
+load-07  UT    44398.0  directRotAngle -212.3357  InverseRotAngle  324.0388
+warp-08  UT    45000.3  directRotAngle -212.3357  InverseRotAngle  334.1012
+load-08  UT    44398.0  directRotAngle -222.6317  InverseRotAngle  334.3347
+warp-09  UT    45000.3  directRotAngle -222.6317  InverseRotAngle  344.3968
+load-09  UT    44398.0  directRotAngle -232.9273  InverseRotAngle  344.6306
+warp-10  UT    45000.3  directRotAngle -232.9273  InverseRotAngle  354.6927
+load-10  UT    44398.1  directRotAngle -243.2232  InverseRotAngle  354.9289
+warp-11  UT    45000.5  directRotAngle -243.2232  InverseRotAngle    4.9910
+load-11  UT    44398.4  directRotAngle  106.4785  InverseRotAngle    5.2319
+warp-12  UT    45000.8  directRotAngle  106.4785  InverseRotAngle   15.2946
+load-12  UT    44398.1  directRotAngle   96.1742  InverseRotAngle   15.5311
+done: 25 readings, in C:\Users\lhervier\AppData\Local\Temp\claude\c--Users-lhervier-Perso-kspmod-KSP-ExtMod-ParallaxContinued\899cf80e-bb1f-40c5-a74f-80bdbd5fe940\scratchpad\run-cacti-600\release
