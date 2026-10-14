@@ -2,101 +2,120 @@
 
 Part of [Scatter rotation](README.md): what is still to check before the change can be offered. Each
 point says what a player would see if the change broke something, how to play it, what its script needs,
-and where it stands. A point moves to [Non-regression tests](non-regression.md) once complete.
+and where it stands. In every test, the colliders of the rocks are shown with KSP Diag - Colliders, and
+must follow the rocks drawn. A point moves to [Non-regression tests](non-regression.md) once complete
+([What makes a test complete](non-regression.md#what-makes-a-test-complete)).
 
 ## Summary
 
-- **The protocols played by script** — both protocols of [Reproducing the bug](reproducing-the-bug.md),
-  on both builds, without any other mod; seen once without the change and with it, with another mod
-  installed.
-- **A save of a craft on a rock** — the save of *A craft on a rock is thrown off*, one made without the
-  change and one with it, by the procedure that moves its `UT` back, itself to check.
-- **The colliders on the rocks drawn** — with the change, the collider of each rock keeps the orientation
-  of the rock drawn, at every load.
-- **A craft saved with the release, loaded with the change** — the one load at which every rock takes its
-  new orientation.
+- **The rocks around a craft** — a craft on the ground near rocks, the same save loaded again after an
+  hour of time warp: the rocks turn without the change, and hold still with it; on the Mun and on Eve.
+- **A kerbal on a rock** — a kerbal saved on a rock, loaded again after an hour of time warp, and after
+  a restart of KSP: moved without the change, put back where he was with it; on the Mun and on Eve.
+- **When the floating origin moves** — the rocks and their colliders move with it, together.
+- **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
+  in the scene without any load.
 - **The scatters along the radius: the trees of Kerbin** — the other branch of `alignToTerrainNormal`.
-- **Eve** — both branches of `alignToTerrainNormal` on one body.
-- **The poles** — where `FromToRotation` has no single answer, without the change and with it.
-- **The other ways the body is turned in the scene** — above the rotating-frame altitude and back, a
-  change of sphere of influence, a flight opened from the space centre or the tracking station.
-- **OpenGL** — the GLSL variant of the compute shader.
+- **The south pole** — where `FromToRotation` has no single answer, without the change and with it.
+- **Sigma Dimensions** — a body of another size, and quads of another scale.
+- **OpenGL, on Linux** — the GLSL variant of the compute shader.
 - **Performance** — the time of a frame in a dense scatter, without the change and with it.
-- **Out of reach** — macOS, Linux under Vulkan, mods that change the scale of the bodies.
+- **Out of reach** — macOS, Linux under Vulkan.
 
-## The protocols played by script
+## The rocks around a craft
 
-**If the change broke it**: the rocks of **release + change** would still turn, and the protocols would
-no longer tell the bug from the change.
+**If the change broke it**: the rocks of **release + change** would still turn at a load, or would be
+drawn wrong.
 
-**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load) and
-[A craft on a rock is thrown off](reproducing-the-bug.md#a-craft-on-a-rock-is-thrown-off), on both
-builds, on [the install](README.md#the-builds-and-the-install).
+**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load), on both
+builds: a craft on the ground, some ten metres from the nearest rocks, far enough that no rock reaches
+it as it turns, near enough to see them. On the Mun, where every scatter with a collider is a rock; on
+Eve, where vegetation without colliders grows among them, with both branches of `alignToTerrainNormal`.
 
-**Script**: `automation/run-rocks-turning.py` and `automation/run-craft-on-a-rock.py`, to write. Tools of
-KSP-MCPServer: `load_save`, `warp_to` (check the time after it: it does not report a warp that did not
-happen, as when the craft is moving), `set_ui`, `set_camera`, `screenshot`, `quit_game`; of the
-instruments: `floatingorigin_record`, `landedvessel_read` and `landedvessel_record`,
-`terrainheight_record`, the `_show_window` of each. Starting KSP again is up to the script, outside the
-server.
+**Script**: `automation/run-rocks-turning.py`, to write. Tools of KSP-MCPServer: `load_save`, `warp_to`
+(check the time after it: it does not report a warp that did not happen), `set_ui`, `set_camera`,
+`screenshot`; of the instruments: `floatingorigin_record`, and the `_show_window` of each.
 
-**Where it stands**: both protocols were played on the Mun without the change and with it: without the
-change, the rocks turn at every load by the angle of the Mun and a capsule on a rock is thrown off; with
-it, the rocks do not move and the capsule stays on its rock through twelve loads after an hour of time
-warp each, then twelve loads after a restart of KSP. Those runs had Terrain Precision Fix installed, and
-some of their readings came from outside the instruments: they are to play again on the install, by the
-scripts.
+**Saves**: [`rocks-mun.sfs`](saves/rocks-mun.sfs); `rocks-eve.sfs`, to make.
 
-## A save of a craft on a rock
+**Where it stands**: played on the Mun, without the change and with it: the rocks turn at every load by
+the angle of the Mun without it, and do not move with it. That run was played outside the install
+described here, and some of its readings came from outside the instruments: to play again by the
+script. Also seen once on the Mun with the change, outside the install described here, at the date of
+a save and an hour and forty minutes later: the outlines of the colliders follow the rocks at both dates,
+as on the release; the largest blocks have no outline, with the change and without it: no collider. Not
+played on Eve.
 
-**Why**: a save of a craft on a rock only holds with a build that orients that rock the same way, and the
-change gives every rock a new orientation
-([A craft saved with the release, loaded with the change](#a-craft-saved-with-the-release-loaded-with-the-change)):
-one save made with **release**, one with **release + change**.
+## A kerbal on a rock
 
-**To play**: [Making the save](reproducing-the-bug.md#making-the-save), by hand: placing a craft on a rock
-takes an eye. Then check that the first load of a new session leaves the capsule on its rock, Diag Landed
-Vessel showing it has hardly moved: that checks the `UT` moved back by `InverseRotAngle`. With the change,
-the orientation of the rocks no longer depends on that angle, and the save holds without it.
+**If the change broke it**: a kerbal standing on a rock with **release + change** would still be moved
+at a load: put back higher or lower, sliding down the rock, or beside it.
 
-**Where it stands**: a save made with **release + change**, with Terrain Precision Fix installed, holds
-its capsule; to check without Terrain Precision Fix, which moves the ground a few centimetres. No save
-yet with **release**. The procedure that moves the `UT` back has not been tried.
+**To play**: [A kerbal on a rock is moved](reproducing-the-bug.md#a-kerbal-on-a-rock-is-moved), on both
+builds, on the Mun and on Eve, each build with its own save, made by
+[Making the save](reproducing-the-bug.md#making-the-save): the change gives every rock another
+orientation than the release does. With the change, the orientation of the rocks no longer depends on
+`InverseRotAngle`, and the save holds without moving its `UT` back.
 
-## The colliders on the rocks drawn
+**A kerbal, not a craft of several parts.** KSP puts a craft of a single part back down at every load,
+not a craft of several parts, which starts where the save left it, while stock KSP builds the ground, and
+the rock with it, a few centimetres higher or lower at each load: a capsule on a rock can jump with the
+change as with the release, for a reason that is not this bug
+([Why a kerbal](reproducing-the-bug.md#a-kerbal-on-a-rock-is-moved)).
 
-**If the change broke it**: a craft would hit a rock where none is drawn, or go through one that is; the
-outline Diag Colliders draws around each rock would not match the rock.
+**Script**: `automation/run-kerbal-on-a-rock.py`, to write: twelve loads after an hour of time warp
+each, then KSP started again and twelve loads more; at each load, Diag Floating Origin, Diag Landed Vessel
+and Diag Terrain Height recorded once the digits stop moving, and a view of the kerbal. Tools of
+KSP-MCPServer as in [The rocks around a craft](#the-rocks-around-a-craft), and `quit_game`; of the
+instruments: `landedvessel_read`, `landedvessel_record`, `terrainheight_record`. Starting KSP again is up
+to the script, outside the server.
 
-**To play**: [the install](README.md#the-builds-and-the-install) with
-[KSP Diag - Colliders](https://github.com/lhervier/KSP-Diag-Colliders). Load a save of a craft standing
-among rocks with colliders, look at the rocks next to it from some 12 m, slightly from above, and take a
-screenshot; time warp an hour, load the same save again, take the same screenshot; then KSP started again,
-the same. On every screenshot, the coloured outlines of the colliders follow the rocks drawn. On both
-builds: without the change, they follow the rocks too, as both turn together.
+**Saves**: four, `kerbal-on-a-rock-mun-release.sfs`, `-mun-change.sfs`, `-eve-release.sfs`,
+`-eve-change.sfs`, to make by hand: placing a kerbal on a rock takes an eye.
 
-**Script**: `automation/run-colliders-on-rocks.py`, to write; the tools of
-[The protocols played by script](#the-protocols-played-by-script), `colliders_show_window`,
-`colliders_set_display`.
+**Where it stands**: played on the Mun, outside the install described here, with a capsule rather
+than a kerbal: with the change, the capsule stayed on its rock through twelve loads after an hour of time
+warp each, then twelve loads after a restart of KSP; without it, it was thrown off at the first load
+after ten minutes of play. To play again on the install, with a kerbal, by the script, with new saves;
+the procedure that moves the `UT` back is still to check.
 
-**Where it stands**: played once on **release + change**, with Terrain Precision Fix installed, at the
-`UT` of a save and an hour and forty minutes later: the outlines follow the rocks at both dates, as on the
-release. The largest blocks have no outline with the change and without it: no collider.
+## When the floating origin moves
 
-## A craft saved with the release, loaded with the change
+**If the change broke it**: right after KSP moves the floating origin, the rocks drawn and their
+colliders would no longer be at the same place, or would jump.
 
-**If it goes wrong**: a player who updates Parallax with the change, and loads a base built on a rock or
-right next to one, finds it thrown off once, at that first load.
+**Why**: KSP moves the whole world back to the origin when the active craft goes 500 m from it. The
+colliders are children of their terrain quads and move with them; the rocks drawn are placed from the
+quad's matrix at every frame. The change uses that matrix for the orientation too.
 
-**To play**: the save of a capsule on a rock made with **release**
-([A save of a craft on a rock](#a-save-of-a-craft-on-a-rock)), loaded with **release + change**, then
-again in the same session, then after a restart. Expected from the code: the rock turns once, at the
-first load, and never after; the capsule may be thrown off at that load, and stays where it lands
-afterwards. What to say to players depends on it.
+**To play**: a rover driven among rocks, on its own (a second craft landed and loaded holds the origin
+still), until Diag Floating Origin counts a shift; stop right after it, and look at the rocks next to the
+rover with Diag Colliders. On both builds, on the Mun and on Eve.
 
-**Script**: `automation/run-craft-on-a-rock.py`, with the save and the build given apart.
+**Script**: `drive` or `drive_to`, then `floatingorigin_read` to wait for the shift; a rover save to make.
 
-**Where it stands**: deduced, not tried.
+**Where it stands**: not played.
+
+## When the frame changes
+
+**If the change broke it**: after the craft comes back below the rotating-frame altitude, the rocks
+would have turned, or their colliders would part from the rocks drawn.
+
+**Why**: below that altitude (100 km on the Mun), KSP holds the body still in the scene; above it, the
+body turns in the scene, and when the craft comes back down, it is held still again at another angle,
+without any load. Without the change, the rocks drawn turn with that angle at once. A change of sphere of
+influence goes through the same switch.
+
+**To play**: from the save of [The rocks around a craft](#the-rocks-around-a-craft), a screenshot from
+above; then the craft put on an orbit above 100 km with *Set Orbit* of the `Alt+F12` menu, some time in
+orbit, and put back where it stood with *Set Position*; the same screenshot. Diag Floating Origin shows
+the frame go to `Inertial` and back to `Rotating`, and `directRotAngle` move. On both builds.
+
+**Script**: `set_orbit`, `wait` or `warp_to`, `set_position`, then the screenshots of
+[The rocks around a craft](#the-rocks-around-a-craft).
+
+**Where it stands**: not played. That the body is held still again at another angle is read in the code
+of KSP, not seen.
 
 ## The scatters along the radius: the trees of Kerbin
 
@@ -105,79 +124,64 @@ rather than on the slope of the ground, would lean, turn at every load, or have 
 from what is drawn.
 
 **Why**: with `alignToTerrainNormal = False`, the normal is the direction of the body's centre, not the
-terrain's: the other branch of the code, before the change brings it into the quad's frame. The stock
+terrain's: the other branch of the code, which the change also brings into the quad's frame. The stock
 configs set it on Kerbin, Laythe and Eve, with colliders on Kerbin and Laythe.
 
-**To play**: the protocols of [The protocols played by script](#the-protocols-played-by-script) and
-[The colliders on the rocks drawn](#the-colliders-on-the-rocks-drawn) on Kerbin, a craft standing among
+**To play**: [The rocks around a craft](#the-rocks-around-a-craft) on Kerbin, a craft standing among
 trees, seen from the side as well as from above: a tree leaning shows from the side.
 
-**Script**: the same scripts, with another save; `rocks-kerbin-trees.sfs` to make.
+**Script**: `automation/run-rocks-turning.py`, with another save and another view; `trees-kerbin.sfs`
+to make.
 
 **Where it stands**: not played.
 
-## Eve
+## The south pole
 
-**If the change broke it**: the vegetation and the rocks of Eve, mixed on one body with both branches of
-`alignToTerrainNormal`, would turn, lean or lose their colliders.
+**If the change broke it**: near the south pole, the objects would flip, spin from one frame to the next,
+or part from their colliders.
 
-**To play**: as [The scatters along the radius: the trees of Kerbin](#the-scatters-along-the-radius-the-trees-of-kerbin),
-on Eve, among its vegetation and among its rocks.
+**Why**: `FromToRotation(up, n)` has no single answer when the normal `n` points straight down `up`, and
+near that point a tiny change of the normal turns the object a lot around it. Without the change, `up` is
+the axis of the scene, which is the body's axis of rotation: the case is the south pole of the body. With
+it, `up` is the Y axis of the quad, and a quad of KSP is not turned in its sphere (`PQ.SetupQuad` sets
+its `localRotation` to identity): the same axis, the same place. The change adds a product of matrices on
+the normal, in `float`, which can move it slightly.
+
+**To play**: a craft put down among rocks with *Set Position*, as near the south pole of the Mun as rocks
+grow, and the same at the north pole, where nothing degenerates; both builds; screenshots from above and
+from the side, with Diag Colliders, and a few seconds of video to see whether anything spins.
+
+**Script**: `set_position`, then the steps of [The rocks around a craft](#the-rocks-around-a-craft).
 
 **Where it stands**: not played.
 
-## The poles
+## Sigma Dimensions
 
-**If the change broke it**: near a point where the normal points down the `up` axis, the objects would
-flip, spin, or vanish, drawn or collider.
+**If the change broke it**: on bodies rescaled by Sigma Dimensions, the rocks would be drawn wrong,
+stretched or tilted, or their colliders would part from them.
 
-**Why**: `FromToRotation(up, n)` has no single answer when `n` points straight down `up`. Without the
-change, `up` is the axis of the scene, so this is the south pole of the body; with it, `up` is the Y axis of
-each quad, and where that points depends on how KSP orients its quads.
+**Why**: the change takes the rotation of the quad out of its matrix by dividing by the length of one of
+its axes: it assumes the scale of a quad is the same along its three axes. Sigma Dimensions changes the
+size of the bodies, and Parallax Continued has code of its own for it.
 
-**To play**: both poles of the Mun, a craft put down among rocks with *Set Position*, seen from above, on
-**release** and **release + change**; then, if the Y axis of the quads does not point outwards everywhere,
-the place where it points inwards.
+**To play**: [The rocks around a craft](#the-rocks-around-a-craft) and
+[A kerbal on a rock](#a-kerbal-on-a-rock) on the Mun rescaled by Sigma Dimensions, on both builds.
 
-**Script**: `set_position` puts the craft down; then the steps of
-[The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load).
+**Where it stands**: not played. Sigma Dimensions is still to try.
 
-**Where it stands**: not played. How KSP orients its quads is to read first.
-
-## The other ways the body is turned in the scene
-
-**If the change broke it**: the rocks would turn, or their colliders would part from the drawn rocks,
-after one of the moments KSP turns the body again in the scene without a load.
-
-**Why**: KSP stops holding the body still above its rotating-frame altitude (100 km on the Mun), and when
-the body the craft is near changes. With the change, the orientation no longer depends on the body's angle
-in the scene; without it, the drawn rocks would turn at once, and the colliders built before would keep
-their old orientation, parted from the drawing.
-
-**To play**, from the save of a craft among rocks, each time with a screenshot from above and Diag
-Colliders before and after, and Diag Floating Origin recording the frame and `directRotAngle`:
-
-1. a second craft of the save, landed among the rocks, the first one sent above 100 km and brought back,
-   or the switch to a craft in orbit and back;
-2. a change of sphere of influence and back;
-3. the flight opened again from the space centre, and from the tracking station.
-
-**Script**: `set_orbit`, `switch_vessel`, `go_to_scene`, `fly_vessel`; a save with two crafts to make.
-
-**Where it stands**: not played. That the body stops being held still in those cases is read in the code
-of KSP, not seen.
-
-## OpenGL
+## OpenGL, on Linux
 
 **If the change broke it**: under OpenGL, the rocks would be drawn wrong, or not at all, or still turn.
 
-**Why**: KSP started with `-force-glcore` on Windows loads the `-linux` bundle of Parallax, its GLSL
-variant, the one players get on Linux under OpenGL. The change is in the HLSL source, compiled to GLSL by
-Unity: another compiler, another result to see. Proton presents itself as Windows and loads the `-windows`
-bundle, the one of the other tests.
+**Why**: on Linux, KSP renders with OpenGL and Parallax loads its `-linux` bundle, the GLSL variant of the
+compute shader. The change is in the HLSL source, translated to GLSL by Unity: another compiler, another
+result to see. KSP started with `-force-glcore` on Windows loads the same bundle. Proton presents itself
+as Windows and loads the `-windows` bundle, the one of the other tests.
 
-**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load), KSP
-started with `-force-glcore`, on **release** and **release + change**.
+**To play**: [The rocks around a craft](#the-rocks-around-a-craft) and
+[A kerbal on a rock](#a-kerbal-on-a-rock), on Linux, on both builds.
+
+**Script**: the same scripts, once KSP-MCPServer and the instruments are checked on Linux.
 
 **Where it stands**: not played.
 
@@ -185,19 +189,15 @@ started with `-force-glcore`, on **release** and **release + change**.
 
 **If the change broke it**: a lower frame rate in a dense scatter (the grass of Kerbin, for instance).
 
-**Why**: the change adds, in each call of `GetTRSMatrix`, a matrix product and a transpose for every
-object drawn, at every frame.
+**Why**: the change adds, in each call of `GetTRSMatrix`, a product of matrices and a transpose for
+every object drawn, at every frame.
 
-**To play**: the time of a frame in a dense scatter, the same view, on **release** and
-**release + change**. The instrument is to choose.
+**To play**: the time of a frame, the same view of a dense scatter, on both builds, measured with
+KSPProfiler. The protocol is to write: the view, how long to measure, how many runs.
 
 **Where it stands**: not played.
 
 ## Out of reach
 
-Not tested, and said as such when the change is offered:
-
-- **macOS** (the Metal variant of the `-macosx` bundle) and **Linux under Vulkan** (the SPIR-V variant of
-  the `-linux` bundle): built, never run;
-- **mods that change the scale of the bodies** (Sigma Dimensions among them): the change assumes the scale
-  of a quad is the same along its three axes.
+Not tested, and said as such when the change is offered: **macOS** (the Metal variant of the `-macosx`
+bundle) and **Linux under Vulkan** (the SPIR-V variant of the `-linux` bundle), built, never run.

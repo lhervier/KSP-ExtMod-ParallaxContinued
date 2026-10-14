@@ -101,18 +101,19 @@ touched; of the compiled compute shader, only the four `Evaluate` kernels change
 
 **What it assumes**: the quad's scale is uniform. That holds for the stock bodies; a mod that rescales a
 body with a non-uniform scale would break that assumption
-([Work in progress](work-in-progress.md#out-of-reach)).
+([Work in progress](work-in-progress.md#sigma-dimensions)).
 
 ## What it changes for a player
 
 - **The rocks keep the same orientation at every load**, whatever the time played since the save, and
   after a restart of KSP.
 - **A craft resting on a rock stays on it**, and a craft next to a cluster is no longer reached by it.
-- **Once, at the first load with the change**, every object takes a new orientation, tied to its quad,
-  different from the one it had in the last session. A craft saved on a rock,
-  or right next to one, with Parallax as released can then start inside it, once. Deduced from the code,
-  not tried yet ([Work in progress](work-in-progress.md#a-craft-saved-with-the-release-loaded-with-the-change)).
-- **The case `FromToRotation` cannot settle moves**: `FromToRotation(up, n)` has no single answer when
-  the normal points straight down the `up` axis. Without the change, that is the axis of the scene, so
-  the south pole of the body; with it, the Y axis of each quad, and where that points depends on how KSP
-  orients its quads. Not checked yet ([Work in progress](work-in-progress.md#the-poles)).
+- **At the first load with the change**, every object takes a new orientation, tied to its quad. A
+  craft saved on a rock, or right next to one, with Parallax as released can then start inside it, once:
+  the same as at any load of the release, where every rock already comes back turned by the time played
+  since the save ([Non-regression tests](non-regression.md#a-save-made-with-the-release-loaded-with-the-change)).
+- **The south pole stays where `FromToRotation` has no single answer**: `FromToRotation(up, n)` has no
+  single answer when the normal points straight down the `up` axis. Without the change, `up` is the axis
+  of the scene, which is the body's axis of rotation; with it, the Y axis of the quad, which KSP does not
+  turn in its sphere: the same axis, so the same place, the south pole of the body
+  ([Work in progress](work-in-progress.md#the-south-pole)).

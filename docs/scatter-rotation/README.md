@@ -16,9 +16,9 @@ change, and that every protocol below gives what it says on your own install.
 ## Reproducing the bug
 
 **A save of the Mun loaded again after an hour of time warp: every cluster of rocks has turned on its own
-centre, by the angle the Mun has turned in that hour.** A craft resting on a rock saved in one session
-stays on it when loaded straight away, and is thrown off once the time played has turned the rock under
-it.
+centre, by the angle the Mun has turned in that hour.** A kerbal saved standing on a rock is put back
+where he was when the save is loaded straight away, and moved once the time played has turned the rock
+under him.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
@@ -39,9 +39,9 @@ Parallax Continued 1.0.4 as players have it, without the change and with it.** N
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the protocols played again by script, the
-scatters that stand along the radius of the body (the trees of Kerbin), Eve, the poles, the other ways
-KSP turns a body in the scene, OpenGL, and performance.** Each point says what a player would see if the
+**What is still to check before the change can be offered: the rocks around a craft and a kerbal on a
+rock, on the Mun and on Eve, played by script; the floating origin and the frame switch; the trees of
+Kerbin, the south pole, Sigma Dimensions, OpenGL on Linux, and performance.** Each point says what a player would see if the
 change broke it, and how to play it.
 
 **→ Full page: [Work in progress](work-in-progress.md)**
@@ -87,8 +87,7 @@ played again.
   surface the craft touches, a rock or the ground);
 - [KSP-MCPServer](https://github.com/lhervier/KSP-MCPServer), only to play a protocol by script.
 
-No other mod: in particular not Terrain Precision Fix, which changes where the ground is built and is
-tested on its own.
+No other mod.
 
 **Building release + change.** The build replaces two things in the `GameData/ParallaxContinued` of the
 release: the DLL and the three `ParallaxCompute` bundles. The rest comes from the release: the shader
