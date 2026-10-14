@@ -19,7 +19,8 @@ change, and that every protocol below gives what it says on your own install.
 time warp: every cluster of rocks has turned on its own centre, by the angle the Mun has turned in that
 hour, while the ground and the kerbal have not.** A craft standing on a rock, or right next to one, then
 starts elsewhere on it, or inside it, and can be thrown off. With the change, the same protocol shows
-the rocks holding still, load after load.
+the rocks holding still, load after load. On Eve, the texture of the ground and a plant here and there
+still change at every load, with the change as without it: they do not come from this bug.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
@@ -34,14 +35,14 @@ Nothing else moves: the place, the size and the choice of each object are comput
 ## Non-regression tests
 
 **What the change has been checked against, each test with its save, its script and its result, on
-Parallax Continued 1.0.4 as players have it, without the change and with it.** No test is complete yet.
+Parallax Continued 1.0.4 as players have it, without the change and with it.** Complete: the rocks
+around a craft, on the Mun and on Eve.
 
 **→ Full page: [Non-regression tests](non-regression.md)**
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the rocks around a craft on Eve (played on
-the Mun); the floating origin and the frame switch; the trees of Kerbin, the south pole, Sigma
+**What is still to check before the change can be offered: the floating origin and the frame switch; the trees of Kerbin, the south pole, Sigma
 Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
 change broke it, and how to play it.
 
@@ -74,9 +75,12 @@ played again.
 
 **The install.** KSP 1.12.5, with:
 
-- Parallax Continued, its three packs of stock textures (planet, terrain and scatter, 1.0.3) and what it
-  requires (Kopernicus, KSPTextureLoader, Harmony, KSPBurst, ModuleManager), with its default settings:
-  the rocks of the Mun have colliders;
+- Parallax Continued 1.0.4, its three packs of stock textures (planet, terrain and scatter, 1.0.3) and
+  what it requires: Kopernicus (release 250), ModularFlightIntegrator 1.2.10, KSPTextureLoader 1.0.36,
+  Harmony 2.2.1, KSPBurst 1.7.4.11, ModuleManager 4.2.3; with its default settings: the rocks of the Mun
+  have colliders;
+- Deferred 1.3.5 and Shabby 0.4.2, the renderer most players run Parallax Continued with;
+- KSP Community Fixes 1.41.1;
 - the instruments each protocol names, among
   [KSP Diag - Colliders](https://github.com/lhervier/KSP-Diag-Colliders) (draws the edges of the
   terrain quads, and the colliders of the scatter),

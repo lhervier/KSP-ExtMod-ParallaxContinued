@@ -1,0 +1,26 @@
+load-00  UT    14717.6  directRotAngle -164.2333  InverseRotAngle  230.0512
+warp-01  UT    18319.9  directRotAngle -164.2333  InverseRotAngle  246.1607
+load-01  UT    14716.6  directRotAngle -180.4037  InverseRotAngle  246.2169
+warp-02  UT    18318.8  directRotAngle -180.4037  InverseRotAngle  262.3263
+load-02  UT    14717.3  directRotAngle -196.5693  InverseRotAngle  262.3860
+warp-03  UT    18319.6  directRotAngle -196.5693  InverseRotAngle  278.4956
+load-03  UT    14717.5  directRotAngle -212.7387  InverseRotAngle  278.5560
+warp-04  UT    18319.7  directRotAngle -212.7387  InverseRotAngle  294.6653
+load-04  UT    14717.2  directRotAngle -228.9051  InverseRotAngle  294.7212
+warp-05  UT    18319.5  directRotAngle -228.9051  InverseRotAngle  310.8308
+load-05  UT    14717.5  directRotAngle -245.0739  InverseRotAngle  310.8912
+warp-06  UT    18319.7  directRotAngle -245.0739  InverseRotAngle  327.0006
+load-06  UT    14717.4  directRotAngle -261.2435  InverseRotAngle  327.0606
+warp-07  UT    18319.7  directRotAngle -261.2435  InverseRotAngle  343.1700
+load-07  UT    14717.5  directRotAngle -277.4129  InverseRotAngle  343.2303
+warp-08  UT    18319.7  directRotAngle -277.4129  InverseRotAngle  359.3396
+load-08  UT    14717.5  directRotAngle -293.5824  InverseRotAngle  359.3998
+warp-09  UT    18319.7  directRotAngle -293.5824  InverseRotAngle   15.5090
+load-09  UT    14717.4  directRotAngle   50.2479  InverseRotAngle   15.5692
+warp-10  UT    18319.7  directRotAngle   50.2479  InverseRotAngle   31.6787
+load-10  UT    14717.5  directRotAngle   34.0782  InverseRotAngle   31.7393
+warp-11  UT    18319.8  directRotAngle   34.0782  InverseRotAngle   47.8488
+load-11  UT    14717.6  directRotAngle   17.9084  InverseRotAngle   47.9092
+warp-12  UT    18319.8  directRotAngle   17.9084  InverseRotAngle   64.0185
+load-12  UT    14717.5  directRotAngle    1.7385  InverseRotAngle   64.0787
+done: 25 readings, in C:\Users\lhervier\AppData\Local\Temp\claude\c--Users-lhervier-Perso-kspmod-KSP-ExtMod-ParallaxContinued\648911fb-2252-4964-acc4-3590db154158\scratchpad\eve-release

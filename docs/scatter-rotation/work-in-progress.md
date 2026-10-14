@@ -8,9 +8,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 
 ## Summary
 
-- **The rocks around a craft** — a kerbal on the ground near rocks, the same save loaded again after an
-  hour of time warp: the rocks turn without the change, and hold still with it; played on the Mun by
-  script, on both builds; Eve still to play.
 - **When the floating origin moves** — the rocks and their colliders move with it, together.
 - **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
   in the scene without any load.
@@ -23,46 +20,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 - **OpenGL, on Linux** — the GLSL variant of the compute shader.
 - **Performance** — the time of a frame in a dense scatter, without the change and with it.
 - **Out of reach** — macOS, Linux under Vulkan.
-
-## The rocks around a craft
-
-**If the change broke it**: the rocks of **release + change** would still turn at a load, or would be
-drawn wrong.
-
-**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load), on both
-builds: a kerbal on the ground, a few metres from the nearest rocks, far enough that no rock reaches
-him as it turns, near enough to see them. On the Mun, where every scatter with a collider is a rock; on
-Eve, where vegetation without colliders grows among them, with both branches of `alignToTerrainNormal`.
-
-**Script**: [`automation/run-rocks-turning.py`](automation/run-rocks-turning.py). Tools of KSP-MCPServer:
-`load_save`, `warp_to` (the script checks the time after it: it does not report a warp that did not
-happen), `get_state`, `set_ui`, `set_camera`, `wait`, `screenshot`; of the instruments:
-`floatingorigin_record`, and the `_show_window` of each.
-
-**Saves**: [`rocks-mun-jeb.sfs`](saves/rocks-mun-jeb.sfs); `rocks-eve.sfs`, to make.
-
-**No collider in this test.** Parallax gives a rock a collider only when it comes within the size of a
-craft plus its own size (`SqrDistanceToNearestCraft`); a kerbal a few metres from the nearest rock gets
-none, and KSP Diag - Colliders draws only the grey edges of the quads. That the outlines of the colliders
-follow the rocks drawn is checked in the tests where a craft stands near enough to rocks to give them
-colliders.
-
-**Where it stands**: **played on the Mun by the script, on the install, on both builds**, twelve loads
-after an hour of time warp each (the Mun turned by 112.4° in the scene, `directRotAngle` from 37.0° to
-−75.4°):
-
-| build | what the screenshots show | animation (one load a second) | run |
-|---|---|---|---|
-| **release** | every cluster of rocks turns on itself at every load, the ground, the edges of the quads and the kerbal holding still | [GIF](runs/rocks-mun-jeb/release/rocks-mun-jeb-release.gif), [MP4](runs/rocks-mun-jeb/release/rocks-mun-jeb-release.mp4) | [`release/`](runs/rocks-mun-jeb/release/) |
-| **release + change** | the same rocks at every load | [GIF](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.gif), [MP4](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.mp4) | [`change/`](runs/rocks-mun-jeb/change/) |
-
-On both builds, the hour of time warp alone turns nothing (`warp-NN` against `load-NN` before it), and the
-kerbal stays `LANDED` where the save left him, within 1.2 mm. Each folder holds the screenshots
-(`load-NN` after each load, `warp-NN` before it), the line of KSP Diag - Floating Origin at each of them
-(`readings.json`), what the script printed (`output.txt`) and the `KSP.log` of the session. The first
-screenshot with the change shows other orientations than the first one of the release: the change turns
-every rock once ([A save made with the release, loaded with the change](non-regression.md#a-save-made-with-the-release-loaded-with-the-change)).
-Not played on Eve.
 
 ## When the floating origin moves
 
@@ -91,13 +48,13 @@ body turns in the scene, and when the craft comes back down, it is held still ag
 without any load. Without the change, the rocks drawn turn with that angle at once. A change of sphere of
 influence goes through the same switch.
 
-**To play**: from the save of [The rocks around a craft](#the-rocks-around-a-craft), a screenshot from
+**To play**: from the save of [The rocks around a craft](non-regression.md#the-rocks-around-a-craft), a screenshot from
 above; then the craft put on an orbit above 100 km with *Set Orbit* of the `Alt+F12` menu, some time in
 orbit, and put back where it stood with *Set Position*; the same screenshot. Diag Floating Origin shows
 the frame go to `Inertial` and back to `Rotating`, and `directRotAngle` move. On both builds.
 
 **Script**: `set_orbit`, `wait` or `warp_to`, `set_position`, then the screenshots of
-[The rocks around a craft](#the-rocks-around-a-craft).
+[The rocks around a craft](non-regression.md#the-rocks-around-a-craft).
 
 **Where it stands**: not played. That the body is held still again at another angle is read in the code
 of KSP, not seen.
@@ -112,7 +69,7 @@ from what is drawn.
 terrain's: the other branch of the code, which the change also brings into the quad's frame. The stock
 configs set it on Kerbin, Laythe and Eve, with colliders on Kerbin and Laythe.
 
-**To play**: [The rocks around a craft](#the-rocks-around-a-craft) on Kerbin, a craft standing among
+**To play**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) on Kerbin, a craft standing among
 trees, seen from the side as well as from above: a tree leaning shows from the side.
 
 **Script**: `automation/run-rocks-turning.py`, with another save and another view; `trees-kerbin.sfs`
@@ -136,7 +93,7 @@ the normal, in `float`, which can move it slightly.
 grow, and the same at the north pole, where nothing degenerates; both builds; screenshots from above and
 from the side, with Diag Colliders, and a few seconds of video to see whether anything spins.
 
-**Script**: `set_position`, then the steps of [The rocks around a craft](#the-rocks-around-a-craft).
+**Script**: `set_position`, then the steps of [The rocks around a craft](non-regression.md#the-rocks-around-a-craft).
 
 **Where it stands**: not played.
 
@@ -149,14 +106,14 @@ stretched or tilted, or their colliders would part from them.
 its axes: it assumes the scale of a quad is the same along its three axes. Sigma Dimensions changes the
 size of the bodies, and Parallax Continued has code of its own for it.
 
-**To play**: [The rocks around a craft](#the-rocks-around-a-craft) and
+**To play**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) and
 [A kerbal on a rock](#a-kerbal-on-a-rock) on the Mun rescaled by Sigma Dimensions, on both builds.
 
 **Where it stands**: not played. Sigma Dimensions is still to try.
 
 ## A kerbal on a rock
 
-**What it adds**: [The rocks around a craft](#the-rocks-around-a-craft) shows that the rocks turn at a
+**What it adds**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) shows that the rocks turn at a
 load, and so that what stands on one is put back elsewhere. This test looks at that consequence: a kerbal
 standing on a rock is moved at a load without the change, and put back where he was with it.
 
@@ -212,7 +169,7 @@ Played on both builds, on the Mun and on Eve.
 **Script**: `automation/run-kerbal-on-a-rock.py`, to write: twelve loads after an hour of time warp
 each, then KSP started again and twelve loads more; at each load, Diag Floating Origin, Diag Landed Vessel
 and Diag Terrain Height recorded once the digits stop moving, and a view of the kerbal. Tools of
-KSP-MCPServer as in [The rocks around a craft](#the-rocks-around-a-craft), and `quit_game`; of the
+KSP-MCPServer as in [The rocks around a craft](non-regression.md#the-rocks-around-a-craft), and `quit_game`; of the
 instruments: `landedvessel_read`, `landedvessel_record`, `terrainheight_record`. Starting KSP again is up
 to the script, outside the server.
 
@@ -234,7 +191,7 @@ compute shader. The change is in the HLSL source, translated to GLSL by Unity: a
 result to see. KSP started with `-force-glcore` on Windows loads the same bundle. Proton presents itself
 as Windows and loads the `-windows` bundle, the one of the other tests.
 
-**To play**: [The rocks around a craft](#the-rocks-around-a-craft) and
+**To play**: [The rocks around a craft](non-regression.md#the-rocks-around-a-craft) and
 [A kerbal on a rock](#a-kerbal-on-a-rock), on Linux, on both builds.
 
 **Script**: the same scripts, once KSP-MCPServer and the instruments are checked on Linux.

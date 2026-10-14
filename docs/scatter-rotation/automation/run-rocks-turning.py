@@ -16,6 +16,8 @@ folder, for instance) into the folder of a sandbox game, then run:
    cluster of rocks has turned on itself, by the angle the body turned during the warp.
 4. Steps 2 and 3 again, --loads times in all.
 
+With --step 0, it skips step 2: the save is loaded again at once, with no time played in between.
+
 The camera keeps its heading from north whatever the craft does, so the edges of the terrain quads, which KSP
 Diag - Colliders draws in grey, stay at the same place in every screenshot: what moved in the picture is what
 turned on the ground. It writes every line of KSP Diag - Floating Origin to readings.json, prints the angle the
@@ -107,7 +109,8 @@ def main():
     parser.add_argument("--save", default="rocks-mun-jeb", help="the save, without .sfs (default rocks-mun-jeb)")
     parser.add_argument("--loads", type=int, default=12, help="how many times to load the save again (default 12)")
     parser.add_argument("--step", type=float, default=3600.0,
-                        help="the game time warped before each load, in seconds (default 3600)")
+                        help="the game time warped before each load, in seconds (default 3600); 0 loads the "
+                             "save again at once, without warp-NN screenshots")
     parser.add_argument("--settle", type=float, default=10.0,
                         help="how long to let the craft settle after each load, in seconds (default 10)")
     parser.add_argument("--distance", type=float, default=40.0, help="the height of the camera, in metres")
@@ -123,15 +126,16 @@ def main():
     start = run.record("load-00")
     run.view("load-00")
     for k in range(1, options.loads + 1):
-        ut = call("get_state")["ut"]
-        call("warp_to", seconds=options.step)
-        # warp_to does not tell when the warp did not happen: look at the time.
-        now = call("get_state")["ut"]
-        if now < ut + 0.9 * options.step:
-            log("STOP: the warp did not move the time on (%.1f -> %.1f)" % (ut, now))
-            break
-        run.record("warp-%02d" % k)
-        run.view("warp-%02d" % k)
+        if options.step > 0:
+            ut = call("get_state")["ut"]
+            call("warp_to", seconds=options.step)
+            # warp_to does not tell when the warp did not happen: look at the time.
+            now = call("get_state")["ut"]
+            if now < ut + 0.9 * options.step:
+                log("STOP: the warp did not move the time on (%.1f -> %.1f)" % (ut, now))
+                break
+            run.record("warp-%02d" % k)
+            run.view("warp-%02d" % k)
         run.load()
         vessel = run.record("load-%02d" % k)
         run.view("load-%02d" % k)
