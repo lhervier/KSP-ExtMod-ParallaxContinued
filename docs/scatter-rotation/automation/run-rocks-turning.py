@@ -104,6 +104,10 @@ class Run:
         return vessel
 
     def load(self):
+        # KSP-MCPServer loads a save from the space centre or in flight only, as a player does: from the main
+        # menu, the game is opened at the space centre first.
+        if call("get_state")["scene"] == "MAINMENU":
+            call("open_game", folder=self.options.folder)
         call("load_save", folder=self.options.folder, save=self.options.save)
         call("wait", seconds=self.options.settle)
 
