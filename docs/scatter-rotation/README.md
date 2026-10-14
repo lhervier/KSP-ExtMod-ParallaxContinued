@@ -15,10 +15,10 @@ change, and that every protocol below gives what it says on your own install.
 
 ## Reproducing the bug
 
-**A save of the Mun loaded again after an hour of time warp: every cluster of rocks has turned on its own
-centre, by the angle the Mun has turned in that hour.** A kerbal saved standing on a rock is put back
-where he was when the save is loaded straight away, and moved once the time played has turned the rock
-under him.
+**A kerbal standing on the Mun a few metres from the rocks, the same save loaded again after an hour of
+time warp: every cluster of rocks has turned on its own centre, by the angle the Mun has turned in that
+hour, while the ground and the kerbal have not.** A craft standing on a rock, or right next to one, then
+starts elsewhere on it, or inside it, and can be thrown off.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
@@ -39,9 +39,9 @@ Parallax Continued 1.0.4 as players have it, without the change and with it.** N
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the rocks around a craft and a kerbal on a
-rock, on the Mun and on Eve, played by script; the floating origin and the frame switch; the trees of
-Kerbin, the south pole, Sigma Dimensions, OpenGL on Linux, and performance.** Each point says what a player would see if the
+**What is still to check before the change can be offered: the rocks around a craft on Eve (played on
+the Mun); the floating origin and the frame switch; the trees of Kerbin, the south pole, Sigma
+Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
 change broke it, and how to play it.
 
 **→ Full page: [Work in progress](work-in-progress.md)**

@@ -8,16 +8,18 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 
 ## Summary
 
-- **The rocks around a craft** — a craft on the ground near rocks, the same save loaded again after an
-  hour of time warp: the rocks turn without the change, and hold still with it; on the Mun and on Eve.
-- **A kerbal on a rock** — a kerbal saved on a rock, loaded again after an hour of time warp, and after
-  a restart of KSP: moved without the change, put back where he was with it; on the Mun and on Eve.
+- **The rocks around a craft** — a kerbal on the ground near rocks, the same save loaded again after an
+  hour of time warp: the rocks turn without the change, and hold still with it; played on the Mun by
+  script, on both builds; Eve still to play.
 - **When the floating origin moves** — the rocks and their colliders move with it, together.
 - **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
   in the scene without any load.
 - **The scatters along the radius: the trees of Kerbin** — the other branch of `alignToTerrainNormal`.
 - **The south pole** — where `FromToRotation` has no single answer, without the change and with it.
 - **Sigma Dimensions** — a body of another size, and quads of another scale.
+- **A kerbal on a rock** — the consequence of the rocks that turn: a kerbal saved on a rock, loaded
+  again after an hour of time warp, and after a restart of KSP: moved without the change, put back where
+  he was with it; on the Mun and on Eve.
 - **OpenGL, on Linux** — the GLSL variant of the compute shader.
 - **Performance** — the time of a frame in a dense scatter, without the change and with it.
 - **Out of reach** — macOS, Linux under Vulkan.
@@ -28,56 +30,39 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 drawn wrong.
 
 **To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load), on both
-builds: a craft on the ground, some ten metres from the nearest rocks, far enough that no rock reaches
-it as it turns, near enough to see them. On the Mun, where every scatter with a collider is a rock; on
+builds: a kerbal on the ground, a few metres from the nearest rocks, far enough that no rock reaches
+him as it turns, near enough to see them. On the Mun, where every scatter with a collider is a rock; on
 Eve, where vegetation without colliders grows among them, with both branches of `alignToTerrainNormal`.
 
-**Script**: `automation/run-rocks-turning.py`, to write. Tools of KSP-MCPServer: `load_save`, `warp_to`
-(check the time after it: it does not report a warp that did not happen), `set_ui`, `set_camera`,
-`screenshot`; of the instruments: `floatingorigin_record`, and the `_show_window` of each.
+**Script**: [`automation/run-rocks-turning.py`](automation/run-rocks-turning.py). Tools of KSP-MCPServer:
+`load_save`, `warp_to` (the script checks the time after it: it does not report a warp that did not
+happen), `get_state`, `set_ui`, `set_camera`, `wait`, `screenshot`; of the instruments:
+`floatingorigin_record`, and the `_show_window` of each.
 
-**Saves**: [`rocks-mun.sfs`](saves/rocks-mun.sfs); `rocks-eve.sfs`, to make.
+**Saves**: [`rocks-mun-jeb.sfs`](saves/rocks-mun-jeb.sfs); `rocks-eve.sfs`, to make.
 
-**Where it stands**: played on the Mun, without the change and with it: the rocks turn at every load by
-the angle of the Mun without it, and do not move with it. That run was played outside the install
-described here, and some of its readings came from outside the instruments: to play again by the
-script. Also seen once on the Mun with the change, outside the install described here, at the date of
-a save and an hour and forty minutes later: the outlines of the colliders follow the rocks at both dates,
-as on the release; the largest blocks have no outline, with the change and without it: no collider. Not
-played on Eve.
+**No collider in this test.** Parallax gives a rock a collider only when it comes within the size of a
+craft plus its own size (`SqrDistanceToNearestCraft`); a kerbal a few metres from the nearest rock gets
+none, and KSP Diag - Colliders draws only the grey edges of the quads. That the outlines of the colliders
+follow the rocks drawn is checked in the tests where a craft stands near enough to rocks to give them
+colliders.
 
-## A kerbal on a rock
+**Where it stands**: **played on the Mun by the script, on the install, on both builds**, twelve loads
+after an hour of time warp each (the Mun turned by 112.4° in the scene, `directRotAngle` from 37.0° to
+−75.4°):
 
-**If the change broke it**: a kerbal standing on a rock with **release + change** would still be moved
-at a load: put back higher or lower, sliding down the rock, or beside it.
+| build | what the screenshots show | animation (one load a second) | run |
+|---|---|---|---|
+| **release** | every cluster of rocks turns on itself at every load, the ground, the edges of the quads and the kerbal holding still | [GIF](runs/rocks-mun-jeb/release/rocks-mun-jeb-release.gif), [MP4](runs/rocks-mun-jeb/release/rocks-mun-jeb-release.mp4) | [`release/`](runs/rocks-mun-jeb/release/) |
+| **release + change** | the same rocks at every load | [GIF](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.gif), [MP4](runs/rocks-mun-jeb/change/rocks-mun-jeb-change.mp4) | [`change/`](runs/rocks-mun-jeb/change/) |
 
-**To play**: [A kerbal on a rock is moved](reproducing-the-bug.md#a-kerbal-on-a-rock-is-moved), on both
-builds, on the Mun and on Eve, each build with its own save, made by
-[Making the save](reproducing-the-bug.md#making-the-save): the change gives every rock another
-orientation than the release does. With the change, the orientation of the rocks no longer depends on
-`InverseRotAngle`, and the save holds without moving its `UT` back.
-
-**A kerbal, not a craft of several parts.** KSP puts a craft of a single part back down at every load,
-not a craft of several parts, which starts where the save left it, while stock KSP builds the ground, and
-the rock with it, a few centimetres higher or lower at each load: a capsule on a rock can jump with the
-change as with the release, for a reason that is not this bug
-([Why a kerbal](reproducing-the-bug.md#a-kerbal-on-a-rock-is-moved)).
-
-**Script**: `automation/run-kerbal-on-a-rock.py`, to write: twelve loads after an hour of time warp
-each, then KSP started again and twelve loads more; at each load, Diag Floating Origin, Diag Landed Vessel
-and Diag Terrain Height recorded once the digits stop moving, and a view of the kerbal. Tools of
-KSP-MCPServer as in [The rocks around a craft](#the-rocks-around-a-craft), and `quit_game`; of the
-instruments: `landedvessel_read`, `landedvessel_record`, `terrainheight_record`. Starting KSP again is up
-to the script, outside the server.
-
-**Saves**: four, `kerbal-on-a-rock-mun-release.sfs`, `-mun-change.sfs`, `-eve-release.sfs`,
-`-eve-change.sfs`, to make by hand: placing a kerbal on a rock takes an eye.
-
-**Where it stands**: played on the Mun, outside the install described here, with a capsule rather
-than a kerbal: with the change, the capsule stayed on its rock through twelve loads after an hour of time
-warp each, then twelve loads after a restart of KSP; without it, it was thrown off at the first load
-after ten minutes of play. To play again on the install, with a kerbal, by the script, with new saves;
-the procedure that moves the `UT` back is still to check.
+On both builds, the hour of time warp alone turns nothing (`warp-NN` against `load-NN` before it), and the
+kerbal stays `LANDED` where the save left him, within 1.2 mm. Each folder holds the screenshots
+(`load-NN` after each load, `warp-NN` before it), the line of KSP Diag - Floating Origin at each of them
+(`readings.json`), what the script printed (`output.txt`) and the `KSP.log` of the session. The first
+screenshot with the change shows other orientations than the first one of the release: the change turns
+every rock once ([A save made with the release, loaded with the change](non-regression.md#a-save-made-with-the-release-loaded-with-the-change)).
+Not played on Eve.
 
 ## When the floating origin moves
 
@@ -168,6 +153,77 @@ size of the bodies, and Parallax Continued has code of its own for it.
 [A kerbal on a rock](#a-kerbal-on-a-rock) on the Mun rescaled by Sigma Dimensions, on both builds.
 
 **Where it stands**: not played. Sigma Dimensions is still to try.
+
+## A kerbal on a rock
+
+**What it adds**: [The rocks around a craft](#the-rocks-around-a-craft) shows that the rocks turn at a
+load, and so that what stands on one is put back elsewhere. This test looks at that consequence: a kerbal
+standing on a rock is moved at a load without the change, and put back where he was with it.
+
+**If the change broke it**: a kerbal standing on a rock with **release + change** would still be moved
+at a load: put back higher or lower, sliding down the rock, or beside it.
+
+**The install**: [the install](README.md#the-builds-and-the-install), on each build, with
+[KSP Diag - Floating Origin](https://github.com/lhervier/KSP-Diag-FloatingOrigin),
+[KSP Diag - Landed Vessel](https://github.com/lhervier/KSP-Diag-LandedVessel) and
+[KSP Diag - Terrain Height](https://github.com/lhervier/KSP-Diag-TerrainHeight). After a load, Diag
+Landed Vessel shows how far the kerbal moved from where the save left him, once settled; Diag Terrain
+Height, the height of the surface he stands on above the ground of the terrain, which is the top of the
+rock under him.
+
+**Why a kerbal.** At every load, KSP puts a craft of a single part, a kerbal on EVA among others, back
+down on the first collider a ray cast from 500 m above it meets (`Vessel.CheckGroundCollision`). A kerbal
+on a rock that did not turn is put back where he was; on a rock that turned, he is put back on whatever
+the rock now has under him. A craft of several parts is not put back down: it starts where the save left
+it, while the rock follows its terrain quad, which stock KSP builds a few centimetres higher or lower at
+each load ([Why it is different at every load](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/the-culprit-ground.md#why-it-is-different-at-every-load)).
+Such a craft can start slightly inside its rock and jump, with the change as without it: a defect of
+stock KSP, not this one.
+
+**The save** is a kerbal on EVA standing on a rock, saved **with the same build** as the one it is loaded
+with: the change gives every rock another orientation than the release does. Without the change, it is
+made so that the first load of a new session puts the rock where it was when the save was made: the `UT`
+of the save is moved back by the time KSP had kept in `InverseRotAngle`. With the change, the orientation
+of the rocks no longer depends on `InverseRotAngle`, and the save holds without moving its `UT` back.
+
+1. Start KSP and load [`rocks-mun-jeb.sfs`](saves/rocks-mun-jeb.sfs), Jebediah Kerman already on EVA. Put
+   him just above the top of a rock with *Set Position* of the `Alt+F12` menu, and let him settle on a part of the rock
+   flat enough that he does not slide.
+2. Read `InverseRotAngle` in Diag Floating Origin, and save.
+3. In the `.sfs`, in `FLIGHTSTATE`, lower `UT` by `InverseRotAngle / 360 × 138984` seconds (the angle
+   taken between 0 and 360).
+
+At the first load of a new session, `InverseRotAngle` is 0, and the Mun is turned as it was when the save
+was made. *Not checked yet.*
+
+**By hand**:
+
+1. Start KSP, copy its save into the folder of a sandbox game and load it. Wait for the digits of Diag
+   Landed Vessel to stop moving, then press *Record* in the three windows: the kerbal is on his rock, and
+   has hardly moved.
+2. Let an hour of game time go by: time warp ×100 on rails for about 36 seconds.
+3. Load **the same save** again and record: the rock has turned under the kerbal, and KSP has put him
+   back on what the rock now has under him: higher, lower, on a slope he slides down, or on the ground
+   beside it. Diag Terrain Height shows another surface under him, Diag Landed Vessel how far he moved.
+4. Quit KSP, start it again, load the save and record: the kerbal is back on his rock as at step 1.
+
+Played on both builds, on the Mun and on Eve.
+
+**Script**: `automation/run-kerbal-on-a-rock.py`, to write: twelve loads after an hour of time warp
+each, then KSP started again and twelve loads more; at each load, Diag Floating Origin, Diag Landed Vessel
+and Diag Terrain Height recorded once the digits stop moving, and a view of the kerbal. Tools of
+KSP-MCPServer as in [The rocks around a craft](#the-rocks-around-a-craft), and `quit_game`; of the
+instruments: `landedvessel_read`, `landedvessel_record`, `terrainheight_record`. Starting KSP again is up
+to the script, outside the server.
+
+**Saves**: four, `kerbal-on-a-rock-mun-release.sfs`, `-mun-change.sfs`, `-eve-release.sfs`,
+`-eve-change.sfs`, to make by hand: placing a kerbal on a rock takes an eye.
+
+**Where it stands**: played on the Mun, outside the install described here, with a capsule rather
+than a kerbal: with the change, the capsule stayed on its rock through twelve loads after an hour of time
+warp each, then twelve loads after a restart of KSP; without it, it was thrown off at the first load
+after ten minutes of play. To play again on the install, with a kerbal, by the script, with new saves;
+the procedure that moves the `UT` back is still to check.
 
 ## OpenGL, on Linux
 
