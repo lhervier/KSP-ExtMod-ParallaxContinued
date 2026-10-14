@@ -37,6 +37,15 @@ release, the scatter turns at every load, and the test means nothing there.
 
 **→ Full chapter: [Non-regression tests: the colliders on the scatter](non-regression/the-colliders-on-the-scatter.md)**
 
+## When the floating origin moves
+
+With the change, when KSP moves the floating origin, the scatter and its colliders stay together: a rover
+driven 500 m to a cluster of cacti of Kerbin, the origin moved while it stands among them, each outline
+still on its cactus. Played with release + change only, on Kerbin only: a rover cannot drive 500 m on
+its own among the rocks of the Mun or of Eve.
+
+**→ Full chapter: [Non-regression tests: when the floating origin moves](non-regression/the-floating-origin.md)**
+
 ## A save made with the release, loaded with the change
 
 Nothing new for a player: at the first load with the change, every rock turns once more, as it already

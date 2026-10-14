@@ -38,13 +38,14 @@ Nothing else moves: the place, the size and the choice of each object are comput
 
 **Whether the change breaks anything else in the game, each test with its save, its script and its
 result, on Parallax Continued 1.0.4 as players have it.** Complete: the colliders on the scatter, on the
-Mun, on Eve and on Kerbin: with the change, they stay on the objects drawn, load after load.
+Mun, on Eve and on Kerbin: with the change, they stay on the objects drawn, load after load; and when the
+floating origin moves, on Kerbin: the cacti and their colliders stay together.
 
 **→ Full page: [Non-regression tests](non-regression.md)**
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the floating origin and the frame switch; the south pole, Sigma
+**What is still to check before the change can be offered: the frame switch; the south pole, Sigma
 Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
 change broke it, and how to play it.
 

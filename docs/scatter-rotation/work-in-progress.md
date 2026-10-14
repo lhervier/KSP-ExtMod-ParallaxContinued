@@ -8,7 +8,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 
 ## Summary
 
-- **When the floating origin moves** — the rocks and their colliders move with it, together.
 - **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
   in the scene without any load.
 - **The south pole** — where `FromToRotation` has no single answer, without the change and with it.
@@ -19,23 +18,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 - **OpenGL, on Linux** — the GLSL variant of the compute shader.
 - **Performance** — the time of a frame in a dense scatter, without the change and with it.
 - **Out of reach** — macOS, Linux under Vulkan.
-
-## When the floating origin moves
-
-**If the change broke it**: right after KSP moves the floating origin, the rocks drawn and their
-colliders would no longer be at the same place, or would jump.
-
-**Why**: KSP moves the whole world back to the origin when the active craft goes 500 m from it. The
-colliders are children of their terrain quads and move with them; the rocks drawn are placed from the
-quad's matrix at every frame. The change uses that matrix for the orientation too.
-
-**To play**: a rover driven among rocks, on its own (a second craft landed and loaded holds the origin
-still), until Diag Floating Origin counts a shift; stop right after it, and look at the rocks next to the
-rover with Diag Colliders. On both builds, on the Mun and on Eve.
-
-**Script**: `drive` or `drive_to`, then `floatingorigin_read` to wait for the shift; a rover save to make.
-
-**Where it stands**: not played.
 
 ## When the frame changes
 
