@@ -3,6 +3,9 @@
 ###############################################################################
 * text=auto
 
+# Saves written by KSP: bytes kept as they are
+*.sfs -text
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
