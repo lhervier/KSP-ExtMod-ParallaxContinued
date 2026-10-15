@@ -30,35 +30,27 @@ A test moves here from [Work in progress](work-in-progress.md) once:
 
 ## The colliders on the scatter
 
-With the change, the colliders Parallax gives the scatter near a craft stay on the objects drawn, load
-after load: on the Mun among rocks, on Eve among rocks and plants without colliders, on Kerbin in a
-cluster of cacti, which stand along the radius of the body. Played with release + change only: on the
-release, the scatter turns at every load, and the test means nothing there.
+With the change, the colliders stay on the objects drawn, load after load, on the Mun, on Eve and on
+Kerbin. Release + change only.
 
 **→ Full chapter: [Non-regression tests: the colliders on the scatter](non-regression/the-colliders-on-the-scatter.md)**
 
 ## When the floating origin moves
 
-With the change, when KSP moves the floating origin, the scatter and its colliders stay together: a rover
-driven 500 m to a cluster of cacti of Kerbin, the origin moved while it stands among them, each outline
-still on its cactus. Played with release + change only, on Kerbin only: a rover cannot drive 500 m on
-its own among the rocks of the Mun or of Eve.
+With the change, the cacti of Kerbin and their colliders stay together when KSP moves the floating
+origin. Release + change only.
 
 **→ Full chapter: [Non-regression tests: when the floating origin moves](non-regression/the-floating-origin.md)**
 
 ## When the frame changes
 
-With the change, a kerbal taken from the ground of the Mun to an orbit 150 km high and put back where he
-stood, twelve times, finds the rocks as he left them, and their colliders on them, while the Mun turned by
-112° in the scene. Nothing is loaded: KSP holds the body still again at another angle when the craft comes
-back below the rotating-frame altitude. Played on both builds: on the release, every cluster of rocks
-turns on itself at every trip, as at a load.
+A kerbal taken to orbit and back, twelve times, without any load: on the release, the rocks turn at
+every trip; with the change, they hold still, their colliders on them.
 
 **→ Full chapter: [Non-regression tests: when the frame changes](non-regression/when-the-frame-changes.md)**
 
 ## A save made with the release, loaded with the change
 
-Nothing new for a player: at the first load with the change, every rock turns once more, as it already
-does at every load of the release, and never again after. Not a test.
+At the first load with the change, every rock turns once more, then never again. Not a test.
 
 **→ Full chapter: [Non-regression tests: a save made with the release, loaded with the change](non-regression/a-save-made-with-the-release.md)**

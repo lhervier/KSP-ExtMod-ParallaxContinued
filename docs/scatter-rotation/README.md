@@ -15,45 +15,29 @@ change, and that every protocol below gives what it says on your own install.
 
 ## Reproducing the bug
 
-**A kerbal standing on the Mun a few metres from the rocks, the same save loaded again after an hour of
-time warp: every cluster of rocks has turned on its own centre, by the angle the Mun has turned in that
-hour, while the ground and the kerbal have not.** A craft standing on a rock, or right next to one, then
-starts elsewhere on it, or inside it, and can be thrown off. On Kerbin, a cluster of cacti, which
-stand along the radius of the body rather than on the slope of the ground, turns the same way. With the
-change, the same protocol shows the rocks and the cacti holding still, load after load. Near the south
-pole of a body, a second defect: the collider of each object is turned around it otherwise than the
-object drawn, already in the release; with the change, it is on its object. The texture of the ground,
-on every body, and a plant here and there on Eve still change at every load, with the change as without
-it: they do not come from this bug.
+**The same save loaded again after an hour of time warp: every cluster of rocks has turned on its own
+centre, while the ground and the kerbal have not.** With the change, the rocks hold still. Near the
+south pole, a second defect, already in the release: a collider not turned like its object.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
 ## The change
 
-**The orientation of each object is built in the frame of its terrain quad, then turned by the quad's
-rotation, in the compute shader that draws the scatter and in the code that gives it its colliders.**
-A second commit gives both sides the same rotation near the south pole, where the code of the colliders
-and the compute shader disagree. Nothing else moves: the place, the size and the choice of each object
-are computed as before.
+**Each object is oriented in the frame of its terrain quad, in the compute shader and in the code of
+the colliders alike.** A second commit makes the two agree near the south pole.
 
 **→ Full page: [The change](the-change.md)**
 
 ## Non-regression tests
 
-**Whether the change breaks anything else in the game, each test with its save, its script and its
-result, on Parallax Continued 1.0.4 as players have it.** Complete: the colliders on the scatter, on the
-Mun, on Eve and on Kerbin: with the change, they stay on the objects drawn, load after load; and when the
-floating origin moves, on Kerbin: the cacti and their colliders stay together; and when the frame
-changes, on the Mun: a kerbal taken to orbit and back finds the rocks as he left them, their colliders
-on them.
+**Each test with its save, its script and its result.** Complete: the colliders on the scatter, the
+floating origin that moves, the frame that changes.
 
 **→ Full page: [Non-regression tests](non-regression.md)**
 
 ## Work in progress
 
-**What is still to check before the change can be offered: Sigma Dimensions, a kerbal on a rock,
-OpenGL on Linux, and performance.** Each point says what a player would see if the change broke it, and
-how to play it.
+**Still to check: Sigma Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.**
 
 **→ Full page: [Work in progress](work-in-progress.md)**
 
