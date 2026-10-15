@@ -43,15 +43,17 @@ are computed as before.
 **Whether the change breaks anything else in the game, each test with its save, its script and its
 result, on Parallax Continued 1.0.4 as players have it.** Complete: the colliders on the scatter, on the
 Mun, on Eve and on Kerbin: with the change, they stay on the objects drawn, load after load; and when the
-floating origin moves, on Kerbin: the cacti and their colliders stay together.
+floating origin moves, on Kerbin: the cacti and their colliders stay together; and when the frame
+changes, on the Mun: a kerbal taken to orbit and back finds the rocks as he left them, their colliders
+on them.
 
 **→ Full page: [Non-regression tests](non-regression.md)**
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the frame switch, Sigma Dimensions, a
-kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
-change broke it, and how to play it.
+**What is still to check before the change can be offered: Sigma Dimensions, a kerbal on a rock,
+OpenGL on Linux, and performance.** Each point says what a player would see if the change broke it, and
+how to play it.
 
 **→ Full page: [Work in progress](work-in-progress.md)**
 

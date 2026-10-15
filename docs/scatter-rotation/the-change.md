@@ -52,6 +52,9 @@ So:
 
 - **nothing turns during a session** as long as the craft stays below that altitude: the body stays still
   in the scene, and the drawn rocks and their colliders keep the orientation they had when they were made;
+- **a craft that goes above that altitude and comes back turns every object** by the body's rotation
+  while it was above, without any load: above it, the body turns in the scene, and KSP holds it still
+  again where it got to ([When the frame changes](non-regression/when-the-frame-changes.md));
 - **loading an older save turns every object** by the body's rotation over the time played since that
   save was made: the date goes back, `InverseRotAngle` does not;
 - **starting KSP again** puts `InverseRotAngle` back to 0: a save loaded then is turned by the time played

@@ -8,8 +8,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 
 ## Summary
 
-- **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
-  in the scene without any load.
 - **Sigma Dimensions** — a body of another size, and quads of another scale.
 - **A kerbal on a rock** — the consequence of the rocks that turn: a kerbal saved on a rock, loaded
   again after an hour of time warp, and after a restart of KSP: moved without the change, put back where
@@ -17,27 +15,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 - **OpenGL, on Linux** — the GLSL variant of the compute shader.
 - **Performance** — the time of a frame in a dense scatter, without the change and with it.
 - **Out of reach** — macOS, Linux under Vulkan.
-
-## When the frame changes
-
-**If the change broke it**: after the craft comes back below the rotating-frame altitude, the rocks
-would have turned, or their colliders would part from the rocks drawn.
-
-**Why**: below that altitude (100 km on the Mun), KSP holds the body still in the scene; above it, the
-body turns in the scene, and when the craft comes back down, it is held still again at another angle,
-without any load. Without the change, the rocks drawn turn with that angle at once. A change of sphere of
-influence goes through the same switch.
-
-**To play**: from a save of [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load), a screenshot from
-above; then the craft put on an orbit above 100 km with *Set Orbit* of the `Alt+F12` menu, some time in
-orbit, and put back where it stood with *Set Position*; the same screenshot. Diag Floating Origin shows
-the frame go to `Inertial` and back to `Rotating`, and `directRotAngle` move. On both builds.
-
-**Script**: `set_orbit`, `wait` or `warp_to`, `set_position`, then the screenshots of
-[The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load).
-
-**Where it stands**: not played. That the body is held still again at another angle is read in the code
-of KSP, not seen.
 
 ## Sigma Dimensions
 

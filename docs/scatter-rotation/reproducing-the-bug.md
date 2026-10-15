@@ -40,7 +40,8 @@ the scene. `Alt+F6` hides both windows; the drawing goes on.
 
 The Mun turns once in 138,984 s: 9.3° for an hour of game time, 1.6° for ten minutes played in real time.
 Saving and loading straight away turns nothing, and neither does time going by while nothing is loaded:
-only loading an older save does, or starting KSP again (see [The change](the-change.md#why-the-rocks-turn)).
+only loading an older save does, or starting KSP again, or a craft going above the rotating-frame altitude
+and back (see [The change](the-change.md#why-the-rocks-turn)).
 
 ![Twelve loads of the same save on the release, an hour of time warp before each: the clusters of rocks turn on themselves, while the ground, the edges of the quads and the kerbal at the centre hold still](runs/rocks-mun-jeb/release/rocks-mun-jeb-release.gif)
 

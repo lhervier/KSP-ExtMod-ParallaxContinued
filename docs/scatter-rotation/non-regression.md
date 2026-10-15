@@ -46,6 +46,16 @@ its own among the rocks of the Mun or of Eve.
 
 **→ Full chapter: [Non-regression tests: when the floating origin moves](non-regression/the-floating-origin.md)**
 
+## When the frame changes
+
+With the change, a kerbal taken from the ground of the Mun to an orbit 150 km high and put back where he
+stood, twelve times, finds the rocks as he left them, and their colliders on them, while the Mun turned by
+112° in the scene. Nothing is loaded: KSP holds the body still again at another angle when the craft comes
+back below the rotating-frame altitude. Played on both builds: on the release, every cluster of rocks
+turns on itself at every trip, as at a load.
+
+**→ Full chapter: [Non-regression tests: when the frame changes](non-regression/when-the-frame-changes.md)**
+
 ## A save made with the release, loaded with the change
 
 Nothing new for a player: at the first load with the change, every rock turns once more, as it already
