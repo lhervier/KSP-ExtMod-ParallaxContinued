@@ -560,7 +560,7 @@ GAME
 	{
 		name = SentinelScenario
 		scene = 7, 8, 5
-		NextSpawnTime = 30005.521271234618
+		NextSpawnTime = 116772.09734848054
 	}
 	SCENARIO
 	{
@@ -693,7 +693,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.12.5
-		UT = 14706.160000228161
+		UT = 64319.843879733438
 		activeVessel = 17
 		mapViewFiltering = -1
 		commNetUIModeTracking = Network
@@ -2787,17 +2787,17 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 2941.8400000642141
+			met = 52555.543879569494
 			lct = 11764.300000163947
-			lastUT = 14706.160000228161
+			lastUT = 64319.843879733438
 			distanceTraveled = 474.84413132932985
 			root = 0
-			lat = -12.494228106302446
-			lon = 91.399044154062551
-			alt = 1760.2532489637379
-			hgt = 0.25768432
-			nrm = 0.0857316554,0.996225417,0.0135996342
-			rot = -0.262595743,-0.58439374,-0.734078705,-0.225068837
+			lat = -12.494226394396053
+			lon = 91.399043485863444
+			alt = 1760.1819122002926
+			hgt = 0.257665753
+			nrm = 0.0860129297,0.996213913,0.0126229525
+			rot = -0.264874578,-0.583739221,-0.733252466,-0.226783752
 			CoM = 0,0,0
 			stg = 0
 			prst = False
@@ -2811,18 +2811,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0.954
-			cHdg = -2.262001
+			cPch = 1.55
+			cHdg = 0
 			cMod = 0
 			ORBIT
 			{
-				SMA = 350923.21744682069
-				ECC = 0.99975441452604763
-				INC = 12.494228106302446
-				LPE = 89.999999967012386
-				LAN = 247.16572244974117
-				MNA = 3.1415926535867258
-				EPH = 14706.160000228161
+				SMA = 350923.18176147708
+				ECC = 0.99975441459774372
+				INC = 12.494226394396055
+				LPE = 89.999999986836372
+				LAN = 109.04058134660744
+				MNA = 3.1415926535714198
+				EPH = 64319.843879733438
 				REF = 5
 				IDENT = Squad/Eve
 			}
@@ -2850,10 +2850,10 @@ GAME
 				srfN = , -1
 				mass = 0.0939999968
 				shielded = False
-				temp = 334.63726508453243
-				tempExt = 357.51894426206911
-				tempExtUnexp = 357.51471531557922
-				staticPressureAtm = 4.2703014404839008
+				temp = 405.99693887461967
+				tempExt = 406.38511983271968
+				tempExtUnexp = 406.38502697247566
+				staticPressureAtm = 4.2703294506962433
 				expt = 0
 				state = 0
 				PreFailState = 0
@@ -2942,7 +2942,7 @@ GAME
 					_flags = 1
 					useGlobalPhysicMaterial = True
 					stagingEnabled = True
-					state = Idle (Grounded)
+					state = Idle_b (Grounded)
 					EVENTS
 					{
 					}
@@ -3340,7 +3340,7 @@ GAME
 								cid = 4294885224
 								uid = 0
 								mid = 0
-								persistentId = 4134604046
+								persistentId = 2157135991
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -3464,7 +3464,7 @@ GAME
 								cid = 4294885286
 								uid = 0
 								mid = 0
-								persistentId = 2163990542
+								persistentId = 579694051
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -3734,21 +3734,21 @@ GAME
 		Unity.Collections v0.8.0.0 = True
 		Unity.Jobs v0.2.9.0 = True
 		KSPBurst v1.7.4.10 = True
-		Kopernicus.Parser v1.0.0.0 / v1.0.0.0+2eed1174cfcc818cd2edf68a3ec63aabd434db29 = True
+		Kopernicus.Parser v1.0.0.0 / v1.0.0.0+2eed1174cfcc818cd2edf68a3ec63aabd434db29 = False
 		ModularFlightIntegrator v1.0.0.0 / v1.2.10.0 = True
 		SharpDX v4.2.0.0 / v4.2.0+8e5df9f17b1d328c595a9df5851dbb2537b55621 / v4.2.0 = True
 		SharpDX.DXGI v4.2.0.0 / v4.2.0+8e5df9f17b1d328c595a9df5851dbb2537b55621 / v4.2.0 = True
 		SharpDX.Direct3D11 v4.2.0.0 / v4.2.0+8e5df9f17b1d328c595a9df5851dbb2537b55621 / v4.2.0 = True
 		KSPTextureLoader v1.0.36.0 / v1.0.36+cda0e0fea05c372369b8464c01035616501d8d28 = True
-		Kopernicus v1.0.250.0 / v1.0.250+2eed1174cfcc818cd2edf68a3ec63aabd434db29 / v1.12.250.0 = True
-		KSPDiagColliders v1.0.9773.22227 = True
-		KSPDiagFloatingOrigin v1.0.9773.22225 = True
+		Kopernicus v1.0.250.0 / v1.0.250+2eed1174cfcc818cd2edf68a3ec63aabd434db29 / v1.12.250.0 = False
+		KSPDiagColliders v1.0.9773.22227 = False
+		KSPDiagFloatingOrigin v1.0.9773.22225 = False
 		KSPDiagLandedVessel v1.0.9773.22224 = False
 		KSPDiagQuadSeams v1.0.9773.22226 = False
 		KSPDiagScatter v1.0.9773.22226 = False
 		KSPDiagTerrainHeight v1.0.9773.22225 = False
 		KSPTextureLoader.Burst v0.0.0.0 = True
-		ParallaxContinued v1.0.0.0 / v1.0.0+c449da19891ae8a39d569d3de0176a8ca16142b3 = True
+		ParallaxContinued v1.0.0.0 / v1.0.0+c449da19891ae8a39d569d3de0176a8ca16142b3 = False
 		PQSBenchMod v0.1.0.0 / v0.1.0+39c4b9d6594327f2ea442b82fc22a45b17ac3f0f = False
 		TerrainPrecisionFixMod v0.3.0.0 / v0.3.0+a63ecb41491330a01c1b333a69b26df8ad5609d3 = False
 		000_KSPBurst = True
@@ -3763,6 +3763,11 @@ GAME
 		Parallax_StockScatterTextures = True
 		Parallax_StockTerrainTextures = True
 		PQSBenchMod = False
+		Kopernicus.Parser v1.0.0.0 / v1.0.0.0+bab156c666d6ea96801dfdac29b7326368fc9bd9 = True
+		Kopernicus v1.0.251.0 / v1.0.251+bab156c666d6ea96801dfdac29b7326368fc9bd9 / v1.12.251.0 = True
+		KSPDiagColliders v1.0.9784.29724 = True
+		KSPDiagFloatingOrigin v1.0.9773.41419 = True
+		ParallaxContinued v1.0.0.0 / v1.0.0+8e41077d9a2adc07114e987af6a9f4f7404b879d = True
 	}
 	ROSTER
 	{
@@ -3863,7 +3868,7 @@ GAME
 							cid = 4294885224
 							uid = 0
 							mid = 0
-							persistentId = 4134604046
+							persistentId = 2157135991
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -3987,7 +3992,7 @@ GAME
 							cid = 4294885286
 							uid = 0
 							mid = 0
-							persistentId = 2163990542
+							persistentId = 579694051
 							launchID = 0
 							parent = 0
 							position = 0,0,0

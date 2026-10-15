@@ -20,9 +20,11 @@ time warp: every cluster of rocks has turned on its own centre, by the angle the
 hour, while the ground and the kerbal have not.** A craft standing on a rock, or right next to one, then
 starts elsewhere on it, or inside it, and can be thrown off. On Kerbin, a cluster of cacti, which
 stand along the radius of the body rather than on the slope of the ground, turns the same way. With the
-change, the same protocol shows the rocks and the cacti holding still, load after load. The texture of
-the ground, on every body, and a plant here and there on Eve still change at every load, with the change
-as without it: they do not come from this bug.
+change, the same protocol shows the rocks and the cacti holding still, load after load. Near the south
+pole of a body, a second defect: the collider of each object is turned around it otherwise than the
+object drawn, already in the release; with the change, it is on its object. The texture of the ground,
+on every body, and a plant here and there on Eve still change at every load, with the change as without
+it: they do not come from this bug.
 
 **→ Full page: [Reproducing the bug](reproducing-the-bug.md)**
 
@@ -30,7 +32,9 @@ as without it: they do not come from this bug.
 
 **The orientation of each object is built in the frame of its terrain quad, then turned by the quad's
 rotation, in the compute shader that draws the scatter and in the code that gives it its colliders.**
-Nothing else moves: the place, the size and the choice of each object are computed as before.
+A second commit gives both sides the same rotation near the south pole, where the code of the colliders
+and the compute shader disagree. Nothing else moves: the place, the size and the choice of each object
+are computed as before.
 
 **→ Full page: [The change](the-change.md)**
 
@@ -45,8 +49,8 @@ floating origin moves, on Kerbin: the cacti and their colliders stay together.
 
 ## Work in progress
 
-**What is still to check before the change can be offered: the frame switch; the south pole, Sigma
-Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
+**What is still to check before the change can be offered: the frame switch, Sigma Dimensions, a
+kerbal on a rock, OpenGL on Linux, and performance.** Each point says what a player would see if the
 change broke it, and how to play it.
 
 **→ Full page: [Work in progress](work-in-progress.md)**
@@ -55,7 +59,7 @@ change broke it, and how to play it.
 
 **The change is offered on top of the `1.0.4` tag**, on the branch
 [`fix/scatter-rotation`](https://github.com/lhervier/KSP-ExtMod-ParallaxContinued/tree/fix/scatter-rotation):
-one commit, two files.
+two commits, two files.
 
 **It is tested on Parallax Continued 1.0.4 as players have it**: the archive of the 1.0.4 release on
 GitHub, which is also the one CKAN installs. That release is not built from the `1.0.4` tag in every

@@ -3,18 +3,18 @@
   "view": "load",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 65846.39115140818,
+   "UniversalTime": 65845.87115140808,
    "RotatingFrame": true,
-   "DirectRotAngle": -125.5756330340862,
-   "InverseRotAngle": 235.59109113124237,
+   "DirectRotAngle": -225.81299573653916,
+   "InverseRotAngle": 335.8197668270376,
    "SphereOrigin": {
-    "x": 4772.31640625,
+    "x": -589255.5625,
     "y": 56818.76953125,
-    "z": -597927.8125
+    "z": 101570.4765625
    },
-   "OriginDistance": 0.027856885568886255,
+   "OriginDistance": 1.5179475531149729,
    "Shifts": 1,
-   "LastShift": 174667.34999279102
+   "LastShift": 198724763.54497167
   },
   "vessel": {
    "id": "a2ad6186-b535-443e-9616-d0cd27713bd3",
@@ -22,16 +22,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.428124734529194,
-   "longitude": -143.96707480453182,
-   "altitude": 640.3805326974252,
-   "heightFromTerrain": 0.7486549019813538,
-   "surfaceSpeed": 0.00012916865935540492,
-   "heading": 282.6793740138143,
-   "pitch": 3.063704785479203,
+   "latitude": -5.428124592637661,
+   "longitude": -143.96707485131205,
+   "altitude": 640.3011870058253,
+   "heightFromTerrain": 0.7486675977706909,
+   "surfaceSpeed": 0.0001872809334006037,
+   "heading": 282.6811122172298,
+   "pitch": 3.1158114666062624,
    "brakes": true,
    "sas": true,
-   "localTime": 0.3987908075110008,
+   "localTime": 0.39876673330697693,
    "solarDay": 21599.999999999996
   },
   "colliders": {
@@ -41,27 +41,64 @@
    "layer": 15,
    "layerName": "Local Scenery",
    "groundQuads": 4,
-   "collidersOn": 0,
+   "collidersOn": 4,
    "collidersOff": 0,
-   "colliders": []
+   "colliders": [
+    {
+     "name": "Kerbin Xn0131002033",
+     "colour": "blue",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002122",
+     "colour": "orange",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002211",
+     "colour": "magenta",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002300",
+     "colour": "cyan",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    }
+   ]
   }
  },
  {
   "view": "before-shift",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 65950.0711514293,
+   "UniversalTime": 65949.5511514292,
    "RotatingFrame": true,
-   "DirectRotAngle": -125.5756330340862,
-   "InverseRotAngle": 237.32314661255964,
+   "DirectRotAngle": -225.81299573653916,
+   "InverseRotAngle": 337.55182230835464,
    "SphereOrigin": {
-    "x": 4772.31640625,
+    "x": -589255.5625,
     "y": 56818.76953125,
-    "z": -597927.8125
+    "z": 101570.4765625
    },
-   "OriginDistance": 494.4853503707475,
+   "OriginDistance": 495.056360207007,
    "Shifts": 1,
-   "LastShift": 174667.34999279102
+   "LastShift": 198724763.54497167
   },
   "vessel": {
    "id": "a2ad6186-b535-443e-9616-d0cd27713bd3",
@@ -69,16 +106,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.417340349906713,
-   "longitude": -144.0131924267652,
-   "altitude": 630.6920089441119,
-   "heightFromTerrain": 0.748062252998352,
-   "surfaceSpeed": 0.00010683372732052516,
-   "heading": 284.43036892259767,
-   "pitch": -1.101000385779951,
+   "latitude": -5.417339900774206,
+   "longitude": -144.01319422302345,
+   "altitude": 630.6346394163556,
+   "heightFromTerrain": 0.7479797005653381,
+   "surfaceSpeed": 0.00015665663249624396,
+   "heading": 284.3953668798233,
+   "pitch": -1.024297347645314,
    "brakes": true,
    "sas": true,
-   "localTime": 0.40346362893170085,
+   "localTime": 0.4034386239420896,
    "solarDay": 21599.999999999996
   },
   "colliders": {
@@ -88,16 +125,52 @@
    "layer": 15,
    "layerName": "Local Scenery",
    "groundQuads": 4,
-   "collidersOn": 1,
+   "collidersOn": 5,
    "collidersOff": 0,
    "colliders": [
     {
-     "name": "Kerbin Xn0131002211/ParallaxCollider(Clone)",
+     "name": "Kerbin Xn0131002033",
      "colour": "blue",
      "on": true,
      "convex": false,
      "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002122",
+     "colour": "orange",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002211",
+     "colour": "magenta",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002211/ParallaxCollider(Clone)",
+     "colour": "yellow",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
      "ticked": true
+    },
+    {
+     "name": "Kerbin Xn0131002300",
+     "colour": "cyan",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
     }
    ]
   }
@@ -106,18 +179,18 @@
   "view": "after-shift",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 65964.85115143232,
+   "UniversalTime": 65964.2511514322,
    "RotatingFrame": true,
-   "DirectRotAngle": -125.5756330340862,
-   "InverseRotAngle": 237.57005807102655,
+   "DirectRotAngle": -225.81299573653916,
+   "InverseRotAngle": 337.7973973042591,
    "SphereOrigin": {
-    "x": 4285.65673828125,
-    "y": 56704.046875,
-    "z": -597932.625
+    "x": -589175.1875,
+    "y": 56704.171875,
+    "z": 102050.4921875
    },
-   "OriginDistance": 2.7893439925775034,
+   "OriginDistance": 3.343199693217729,
    "Shifts": 2,
-   "LastShift": 500.0214969854631
+   "LastShift": 500.01405328645603
   },
   "vessel": {
    "id": "a2ad6186-b535-443e-9616-d0cd27713bd3",
@@ -125,16 +198,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.41715804188063,
-   "longitude": -144.0139686092873,
-   "altitude": 630.4896063595079,
-   "heightFromTerrain": 0.747046709060669,
-   "surfaceSpeed": 0.0001648152034477613,
-   "heading": 283.95759532280954,
-   "pitch": -1.0666796006364172,
+   "latitude": -5.417158191950839,
+   "longitude": -144.0139681782247,
+   "altitude": 630.4502576268278,
+   "heightFromTerrain": 0.7480179667472839,
+   "surfaceSpeed": 0.0001693267080711538,
+   "heading": 283.9485907184032,
+   "pitch": -1.0398135648691593,
    "brakes": true,
    "sas": true,
-   "localTime": 0.4041457321285383,
+   "localTime": 0.40411702962222446,
    "solarDay": 21599.999999999996
   },
   "colliders": {
@@ -144,16 +217,52 @@
    "layer": 15,
    "layerName": "Local Scenery",
    "groundQuads": 4,
-   "collidersOn": 1,
+   "collidersOn": 5,
    "collidersOff": 0,
    "colliders": [
     {
-     "name": "Kerbin Xn0131002211/ParallaxCollider(Clone)",
+     "name": "Kerbin Xn0131002033",
      "colour": "blue",
      "on": true,
      "convex": false,
      "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002122",
+     "colour": "orange",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002211",
+     "colour": "magenta",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
+    },
+    {
+     "name": "Kerbin Xn0131002211/ParallaxCollider(Clone)",
+     "colour": "yellow",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
      "ticked": true
+    },
+    {
+     "name": "Kerbin Xn0131002300",
+     "colour": "cyan",
+     "on": true,
+     "convex": false,
+     "unreadable": false,
+     "ticked": true,
+     "groundLevel": 10
     }
    ]
   }

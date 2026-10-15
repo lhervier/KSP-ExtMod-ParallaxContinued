@@ -49,9 +49,9 @@ side:
 
 **Result**: played by the script on [the install](../README.md#the-builds-and-the-install), with the
 release + change build, twelve loads each; the Mun turned by 112.4° in the scene, Eve by 194°, Kerbin by
-123.6°. **On every screenshot, every outline is on the object it belongs to**: the rocks of the Mun and of
+123.4°. **On every screenshot, every outline is on the object it belongs to**: the rocks of the Mun and of
 Eve, each cactus of the cluster of Kerbin; none moves from one load to the next, and the plants of Eve
-have none. The kerbal stays `LANDED` where the save left him, within 9 mm.
+have none. The kerbal stays `LANDED` where the save left him, within 10 mm.
 
 | body | animation (one load a second) | run |
 |---|---|---|
@@ -59,7 +59,7 @@ have none. The kerbal stays `LANDED` where the save left him, within 9 mm.
 | Eve | [GIF](../runs/colliders-eve/colliders-eve-change.gif), [MP4](../runs/colliders-eve/colliders-eve-change.mp4) | [`colliders-eve/`](../runs/colliders-eve/) |
 | Kerbin | [GIF](../runs/colliders-kerbin/colliders-kerbin-change.gif), [MP4](../runs/colliders-kerbin/colliders-kerbin-change.mp4) | [`colliders-kerbin/`](../runs/colliders-kerbin/) |
 
-![Twelve loads of the same save of Kerbin with the change, ten minutes of time warp before each: a cluster of cacti seen from the side, each cactus outlined in blue by its collider, the outlines staying on the cacti at every load](../runs/colliders-kerbin/colliders-kerbin-change.gif)
+![Twelve loads of the same save of Kerbin with the change, ten minutes of time warp before each: a cluster of cacti seen from the side, each cactus outlined in colour by its collider, the outlines staying on the cacti at every load](../runs/colliders-kerbin/colliders-kerbin-change.gif)
 
 *Kerbin, release + change: the kerbal in the middle of a cluster of cacti, each cactus outlined by its
 collider.*

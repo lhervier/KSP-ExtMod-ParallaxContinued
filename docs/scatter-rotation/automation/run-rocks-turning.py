@@ -22,7 +22,7 @@ With --heading and --pitch, the camera looks at the craft from the side rather t
 see the colliders KSP Diag - Colliders draws in colour on the rocks next to a craft standing among them.
 
 The camera keeps its heading from north whatever the craft does, so the edges of the terrain quads, which KSP
-Diag - Colliders draws in grey, stay at the same place in every screenshot: what moved in the picture is what
+Diag - Colliders draws, stay at the same place in every screenshot: what moved in the picture is what
 turned on the ground. It writes every line of KSP Diag - Floating Origin to readings.json, prints the angle the
 body is turned by in the scene (directRotAngle) at each load, and stops if the warp did not move the time on, or
 if the craft has moved after a load.

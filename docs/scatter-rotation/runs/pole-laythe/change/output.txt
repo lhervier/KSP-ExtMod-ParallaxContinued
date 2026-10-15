@@ -1,0 +1,26 @@
+load-00  UT    46577.3  directRotAngle -242.2522  InverseRotAngle  288.7406
+warp-01  UT    50179.5  directRotAngle -242.2522  InverseRotAngle  313.2172
+load-01  UT    46577.3  directRotAngle -266.8187  InverseRotAngle  313.3072
+warp-02  UT    50179.6  directRotAngle -266.8187  InverseRotAngle  337.7841
+load-02  UT    46577.3  directRotAngle -291.3858  InverseRotAngle  337.8742
+warp-03  UT    50179.5  directRotAngle -291.3858  InverseRotAngle    2.3508
+load-03  UT    46577.3  directRotAngle   44.0475  InverseRotAngle    2.4408
+warp-04  UT    50179.5  directRotAngle   44.0475  InverseRotAngle   26.9175
+load-04  UT    46577.3  directRotAngle   19.4810  InverseRotAngle   27.0073
+warp-05  UT    50179.5  directRotAngle   19.4810  InverseRotAngle   51.4838
+load-05  UT    46577.3  directRotAngle   -5.0855  InverseRotAngle   51.5738
+warp-06  UT    50179.5  directRotAngle   -5.0855  InverseRotAngle   76.0502
+load-06  UT    46577.3  directRotAngle  -29.6518  InverseRotAngle   76.1401
+warp-07  UT    50179.5  directRotAngle  -29.6518  InverseRotAngle  100.6167
+load-07  UT    46577.3  directRotAngle  -54.2182  InverseRotAngle  100.7065
+warp-08  UT    50179.5  directRotAngle  -54.2182  InverseRotAngle  125.1833
+load-08  UT    46577.3  directRotAngle  -78.7848  InverseRotAngle  125.2731
+warp-09  UT    50179.4  directRotAngle  -78.7848  InverseRotAngle  149.7493
+load-09  UT    46577.3  directRotAngle -103.3510  InverseRotAngle  149.8393
+warp-10  UT    50179.5  directRotAngle -103.3510  InverseRotAngle  174.3156
+load-10  UT    46577.3  directRotAngle -127.9175  InverseRotAngle  174.4059
+warp-11  UT    50179.5  directRotAngle -127.9175  InverseRotAngle  198.8822
+load-11  UT    46577.3  directRotAngle -152.4839  InverseRotAngle  198.9722
+warp-12  UT    50179.5  directRotAngle -152.4839  InverseRotAngle  223.4486
+load-12  UT    46577.3  directRotAngle -177.0504  InverseRotAngle  223.5387
+done: 25 readings, in C:\Users\Lionel\AppData\Local\Temp\claude\c--Users-Lionel-Desktop-kspmod-KSP-ExtMod-ParallaxContinued\d57e1e9e-9b91-449c-96fe-41b1bb21bdac\scratchpad\runs-fix2\pole-laythe

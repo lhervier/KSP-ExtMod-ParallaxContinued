@@ -48,13 +48,13 @@ each leg, from 15 m behind the rover, with the window of Diag Floating Origin al
 screen, and stops if the origin moved before the first stop, or did not move once on the second leg.
 
 **Result**: played by the script on [the install](../README.md#the-builds-and-the-install), with the
-release + change build. Before the shift, the rover stands 494.5 m from the origin, and the cacti next to
-it are outlined. After it, Diag Floating Origin counts one more shift, of 500.021 m, the rover stands
-2.8 m from the new origin, and **every outline is still on its cactus**.
+release + change build. Before the shift, the rover stands 495.1 m from the origin, and the cacti next to
+it are outlined. After it, Diag Floating Origin counts one more shift, of 500.014 m, the rover stands
+3.3 m from the new origin, and **every outline is still on its cactus**.
 
 | before the shift | after the shift |
 |---|---|
-| ![The rover 8 m short of the middle of a cluster of cacti, each cactus outlined in blue by its collider; Diag Floating Origin shows an origin distance of 494.5 m](../runs/floating-origin-kerbin/before-shift.jpg) | ![The rover in the middle of the cluster after the floating origin moved; the outlines are still on the cacti; Diag Floating Origin shows 2 shifts, the last of 500.021 m, and an origin distance of 2.8 m](../runs/floating-origin-kerbin/after-shift.jpg) |
+| ![The rover 8 m short of the middle of a cluster of cacti, each cactus outlined in yellow by its collider; Diag Floating Origin shows an origin distance of 495.1 m](../runs/floating-origin-kerbin/before-shift.jpg) | ![The rover in the middle of the cluster after the floating origin moved; the outlines are still on the cacti; Diag Floating Origin shows 2 shifts, the last of 500.014 m, and an origin distance of 3.3 m](../runs/floating-origin-kerbin/after-shift.jpg) |
 
 The run is in [`floating-origin-kerbin/`](../runs/floating-origin-kerbin/): the two screenshots, the line
 of Diag Floating Origin and the colliders listed by Diag Colliders at the load and at each stop

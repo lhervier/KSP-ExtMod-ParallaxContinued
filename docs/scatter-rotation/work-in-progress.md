@@ -10,7 +10,6 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 
 - **When the frame changes** — the craft goes above the rotating-frame altitude and back: the body turns
   in the scene without any load.
-- **The south pole** — where `FromToRotation` has no single answer, without the change and with it.
 - **Sigma Dimensions** — a body of another size, and quads of another scale.
 - **A kerbal on a rock** — the consequence of the rocks that turn: a kerbal saved on a rock, loaded
   again after an hour of time warp, and after a restart of KSP: moved without the change, put back where
@@ -39,26 +38,6 @@ the frame go to `Inertial` and back to `Rotating`, and `directRotAngle` move. On
 
 **Where it stands**: not played. That the body is held still again at another angle is read in the code
 of KSP, not seen.
-
-## The south pole
-
-**If the change broke it**: near the south pole, the objects would flip, spin from one frame to the next,
-or part from their colliders.
-
-**Why**: `FromToRotation(up, n)` has no single answer when the normal `n` points straight down `up`, and
-near that point a tiny change of the normal turns the object a lot around it. Without the change, `up` is
-the axis of the scene, which is the body's axis of rotation: the case is the south pole of the body. With
-it, `up` is the Y axis of the quad, and a quad of KSP is not turned in its sphere (`PQ.SetupQuad` sets
-its `localRotation` to identity): the same axis, the same place. The change adds a product of matrices on
-the normal, in `float`, which can move it slightly.
-
-**To play**: a craft put down among rocks with *Set Position*, as near the south pole of the Mun as rocks
-grow, and the same at the north pole, where nothing degenerates; both builds; screenshots from above and
-from the side, with Diag Colliders, and a few seconds of video to see whether anything spins.
-
-**Script**: `set_position`, then the steps of [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load).
-
-**Where it stands**: not played.
 
 ## Sigma Dimensions
 

@@ -1,5 +1,5 @@
-load          origin     0.0 m  shifts 1  last shift   174667.350 m  colliders 0
+load          origin     1.5 m  shifts 1  last shift 198724763.545 m  colliders 4
 the rover is 502.3 m from the spot
-before-shift  origin   494.5 m  shifts 1  last shift   174667.350 m  colliders 1
-after-shift   origin     2.8 m  shifts 2  last shift      500.021 m  colliders 1
-done: 3 readings, in C:\Users\lhervier\Perso\kspmod\KSP-ExtMod-ParallaxContinued\docs\scatter-rotation\runs\floating-origin-kerbin
+before-shift  origin   495.1 m  shifts 1  last shift 198724763.545 m  colliders 5
+after-shift   origin     3.3 m  shifts 2  last shift      500.014 m  colliders 5
+done: 3 readings, in C:\Users\Lionel\AppData\Local\Temp\claude\c--Users-Lionel-Desktop-kspmod-KSP-ExtMod-ParallaxContinued\d57e1e9e-9b91-449c-96fe-41b1bb21bdac\scratchpad\runs-fix2\floating-origin-kerbin

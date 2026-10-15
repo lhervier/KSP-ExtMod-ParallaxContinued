@@ -3,18 +3,18 @@
   "view": "load-00",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44391.80268521705,
+   "UniversalTime": 44397.30268521617,
    "RotatingFrame": true,
-   "DirectRotAngle": -118.49310452988459,
-   "InverseRotAngle": 230.09288414807702,
+   "DirectRotAngle": 23.12403084792345,
+   "InverseRotAngle": 88.56763057142427,
    "SphereOrigin": {
-    "x": 78415.203125,
+    "x": 306600.0625,
     "y": 56950.82421875,
-    "z": -592765.125
+    "z": 513343.09375
    },
-   "OriginDistance": 4.226062632776434,
+   "OriginDistance": 8.346434785109496,
    "Shifts": 1,
-   "LastShift": 412694479.12832713
+   "LastShift": 286339442.92069066
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -22,16 +22,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814261259326,
-   "longitude": -143.9715491099487,
-   "altitude": 636.3296096224803,
-   "heightFromTerrain": 0.25540992617607117,
-   "surfaceSpeed": 1.8622756892423048e-09,
-   "heading": 35.73639066479653,
-   "pitch": 89.94079357763322,
+   "latitude": -5.440814218379526,
+   "longitude": -143.9715490792884,
+   "altitude": 636.347396323341,
+   "heightFromTerrain": 0.25548940896987915,
+   "surfaceSpeed": 7.450466910099659e-09,
+   "heading": 51.01739635397543,
+   "pitch": 89.94847535880506,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4055085424871046,
+   "localTime": 0.4057650240537125,
    "solarDay": 21599.999999999996
   }
  },
@@ -39,16 +39,16 @@
   "view": "warp-01",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44991.85277593053,
+   "UniversalTime": 44999.53050992285,
    "RotatingFrame": true,
-   "DirectRotAngle": -118.49310452988459,
-   "InverseRotAngle": 240.11719017116127,
+   "DirectRotAngle": 23.12403084792345,
+   "InverseRotAngle": 98.62831734392023,
    "SphereOrigin": {
-    "x": 78415.203125,
+    "x": 306600.0625,
     "y": 56950.82421875,
-    "z": -592765.125
+    "z": 513343.09375
    },
-   "OriginDistance": 4.2260522379811905,
+   "OriginDistance": 8.346431678006653,
    "Shifts": 0,
    "LastShift": null
   },
@@ -58,16 +58,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814250936535,
-   "longitude": -143.97154910202661,
-   "altitude": 636.3296362713445,
-   "heightFromTerrain": 0.25543278455734253,
-   "surfaceSpeed": 0.0029221055375472133,
-   "heading": 37.60879275991272,
-   "pitch": 89.9126439967852,
+   "latitude": -5.440814211238002,
+   "longitude": -143.97154907538098,
+   "altitude": 636.3473886493593,
+   "heightFromTerrain": 0.25547873973846436,
+   "surfaceSpeed": 0.0022015262673894583,
+   "heading": 57.11584033792931,
+   "pitch": 89.9361840108011,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4332904911532527,
+   "localTime": 0.43364594187506056,
    "solarDay": 21599.999999999996
   }
  },
@@ -75,18 +75,18 @@
   "view": "load-01",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.14268521604,
+   "UniversalTime": 44397.342685216165,
    "RotatingFrame": true,
-   "DirectRotAngle": -128.6477156527891,
-   "InverseRotAngle": 240.35340992904048,
+   "DirectRotAngle": 12.84149129009245,
+   "InverseRotAngle": 98.85083836053639,
    "SphereOrigin": {
-    "x": -27324.671875,
+    "x": 393300.96875,
     "y": 56950.82421875,
-    "z": -597305.6875
+    "z": 450372.125
    },
-   "OriginDistance": 0.13242442207578606,
+   "OriginDistance": 0.09452848815670599,
    "Shifts": 1,
-   "LastShift": 5551293.817206405
+   "LastShift": 5621186.076642678
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -94,16 +94,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.4408143313271,
-   "longitude": -143.97154915694816,
-   "altitude": 636.3201687028632,
-   "heightFromTerrain": 0.2554484009742737,
-   "surfaceSpeed": 1.5045910686759678e-08,
-   "heading": 35.14632131787517,
-   "pitch": 89.94474681916546,
+   "latitude": -5.440814273990864,
+   "longitude": -143.97154911745488,
+   "altitude": 636.3362655882956,
+   "heightFromTerrain": 0.2554303705692291,
+   "surfaceSpeed": 1.5914460449549066e-08,
+   "heading": 39.58067554536115,
+   "pitch": 89.8944893238666,
    "brakes": false,
    "sas": false,
-   "localTime": 0.40580483865279926,
+   "localTime": 0.40576594987361997,
    "solarDay": 21599.999999999996
   }
  },
@@ -111,16 +111,16 @@
   "view": "warp-02",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.492534153644,
+   "UniversalTime": 44999.53050992285,
    "RotatingFrame": true,
-   "DirectRotAngle": -128.6477156527891,
-   "InverseRotAngle": 250.41613521174088,
+   "DirectRotAngle": 12.84149129009245,
+   "InverseRotAngle": 108.91085690175123,
    "SphereOrigin": {
-    "x": -27324.671875,
+    "x": 393300.96875,
     "y": 56950.82421875,
-    "z": -597305.6875
+    "z": 450372.125
    },
-   "OriginDistance": 0.13238003202433485,
+   "OriginDistance": 0.09452848815670599,
    "Shifts": 0,
    "LastShift": null
   },
@@ -130,16 +130,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.4408143215967,
-   "longitude": -143.97154914852965,
-   "altitude": 636.3201973555842,
-   "heightFromTerrain": 0.25547611713409424,
-   "surfaceSpeed": 0.0029392524543814936,
-   "heading": 35.019437383091514,
-   "pitch": 89.91487862236465,
+   "latitude": -5.440814271068984,
+   "longitude": -143.97154911551286,
+   "altitude": 636.3363168297801,
+   "heightFromTerrain": 0.2554791569709778,
+   "surfaceSpeed": 0.001562480564926634,
+   "heading": 61.42582106607741,
+   "pitch": 89.99482658791335,
    "brakes": false,
    "sas": false,
-   "localTime": 0.43369047983070297,
+   "localTime": 0.43364501583765763,
    "solarDay": 21599.999999999996
   }
  },
@@ -147,18 +147,18 @@
   "view": "load-02",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.14268521604,
+   "UniversalTime": 44397.30268521617,
    "RotatingFrame": true,
-   "DirectRotAngle": -138.9466606933687,
-   "InverseRotAngle": 250.6523549696201,
+   "DirectRotAngle": 2.5592858479020606,
+   "InverseRotAngle": 109.13237557144566,
    "SphereOrigin": {
-    "x": -133673.28125,
+    "x": 467374.5,
     "y": 56950.82421875,
-    "z": -582796.8125
+    "z": 372936.5
    },
-   "OriginDistance": 0.04127693289113826,
+   "OriginDistance": 0.09326296540743703,
    "Shifts": 1,
-   "LastShift": 5630139.000399746
+   "LastShift": 5620995.475651012
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -166,16 +166,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814127647441,
-   "longitude": -143.97154896132972,
-   "altitude": 636.364795633941,
-   "heightFromTerrain": 0.2553592622280121,
-   "surfaceSpeed": 8.529176948176722e-13,
-   "heading": 32.79560653391077,
-   "pitch": 89.93284781416828,
+   "latitude": -5.440814262238525,
+   "longitude": -143.9715491094243,
+   "altitude": 636.3382853734074,
+   "heightFromTerrain": 0.25543510913848877,
+   "surfaceSpeed": 1.53596275228276e-08,
+   "heading": 40.20132396546925,
+   "pitch": 89.89633239827513,
    "brakes": false,
    "sas": false,
-   "localTime": 0.405803913270258,
+   "localTime": 0.4057650239700017,
    "solarDay": 21599.999999999996
   }
  },
@@ -183,16 +183,16 @@
   "view": "warp-03",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.51268521564,
+   "UniversalTime": 44999.5324435166,
    "RotatingFrame": true,
-   "DirectRotAngle": -138.9466606933687,
-   "InverseRotAngle": 260.71541689156993,
+   "DirectRotAngle": 2.5592858479020606,
+   "InverseRotAngle": 119.1930946461373,
    "SphereOrigin": {
-    "x": -133673.28125,
+    "x": 467374.5,
     "y": 56950.82421875,
-    "z": -582796.8125
+    "z": 372936.5
    },
-   "OriginDistance": 0.04128651917309251,
+   "OriginDistance": 0.09326296540743703,
    "Shifts": 0,
    "LastShift": null
   },
@@ -202,16 +202,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814117808923,
-   "longitude": -143.97154895341097,
-   "altitude": 636.3647905424004,
-   "heightFromTerrain": 0.2553464472293854,
-   "surfaceSpeed": 0.002963718934726758,
-   "heading": 34.38085104108562,
-   "pitch": 89.90356178128818,
+   "latitude": -5.440814259037287,
+   "longitude": -143.97154910772522,
+   "altitude": 636.3383385480847,
+   "heightFromTerrain": 0.2554815709590912,
+   "surfaceSpeed": 0.0015780064482749019,
+   "heading": 82.61616134890899,
+   "pitch": 89.99383113687217,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4336914132922362,
+   "localTime": 0.433645105377519,
    "solarDay": 21599.999999999996
   }
  },
@@ -219,18 +219,18 @@
   "view": "load-03",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.16268521603,
+   "UniversalTime": 44397.30268521617,
    "RotatingFrame": true,
-   "DirectRotAngle": -149.24661060447886,
-   "InverseRotAngle": 260.95263899637087,
+   "DirectRotAngle": -7.723620127765116,
+   "InverseRotAngle": 119.41528154711284,
    "SphereOrigin": {
-    "x": -235723.890625,
+    "x": 526440,
     "y": 56950.82421875,
-    "z": -549504.125
+    "z": 283516
    },
-   "OriginDistance": 0.09780682548593936,
+   "OriginDistance": 0.18775981899480215,
    "Shifts": 1,
-   "LastShift": 5630688.106379522
+   "LastShift": 5621377.950920085
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -238,16 +238,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814157876089,
-   "longitude": -143.97154900958907,
-   "altitude": 636.3598746759817,
-   "heightFromTerrain": 0.25548163056373596,
-   "surfaceSpeed": 7.450495331795537e-09,
-   "heading": 46.24941462423129,
-   "pitch": 89.95559385724884,
+   "latitude": -5.44081417993324,
+   "longitude": -143.97154902228684,
+   "altitude": 636.3617861977546,
+   "heightFromTerrain": 0.2554210126399994,
+   "surfaceSpeed": 7.679441524594072e-09,
+   "heading": 39.12495563752714,
+   "pitch": 89.89286994625833,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058057649880558,
+   "localTime": 0.4057650242120502,
    "solarDay": 21599.999999999996
   }
  },
@@ -255,16 +255,16 @@
   "view": "warp-04",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.55256436603,
+   "UniversalTime": 44999.51026822363,
    "RotatingFrame": true,
-   "DirectRotAngle": -149.24661060447886,
-   "InverseRotAngle": 271.0160330150741,
+   "DirectRotAngle": -7.723620127765116,
+   "InverseRotAngle": 129.4756301661938,
    "SphereOrigin": {
-    "x": -235723.890625,
+    "x": 526440,
     "y": 56950.82421875,
-    "z": -549504.125
+    "z": 283516
    },
-   "OriginDistance": 0.09774454808011937,
+   "OriginDistance": 0.18775883515321648,
    "Shifts": 0,
    "LastShift": null
   },
@@ -274,16 +274,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814142229568,
-   "longitude": -143.97154899761264,
-   "altitude": 636.3597976664314,
-   "heightFromTerrain": 0.2553962767124176,
-   "surfaceSpeed": 0.003670866042262145,
-   "heading": 45.216104066294264,
-   "pitch": 89.91385962000928,
+   "latitude": -5.440814173906852,
+   "longitude": -143.9715490179883,
+   "altitude": 636.361847121967,
+   "heightFromTerrain": 0.2554739713668823,
+   "surfaceSpeed": 0.0021831776073464857,
+   "heading": 49.71988572322495,
+   "pitch": 89.98494235238192,
    "brakes": false,
    "sas": false,
-   "localTime": 0.43369325942641634,
+   "localTime": 0.4336450049187805,
    "solarDay": 21599.999999999996
   }
  },
@@ -291,18 +291,18 @@
   "view": "load-04",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.18268521603,
+   "UniversalTime": 44397.30268521617,
    "RotatingFrame": true,
-   "DirectRotAngle": -159.54622438106128,
-   "InverseRotAngle": 271.2525868885938,
+   "DirectRotAngle": -18.00615564782163,
+   "InverseRotAngle": 129.69781706716935,
    "SphereOrigin": {
-    "x": -330174.53125,
+    "x": 568593.375,
     "y": 56950.82421875,
-    "z": -498503.1875
+    "z": 184991.84375
    },
-   "OriginDistance": 0.039704591427166376,
+   "OriginDistance": 0.1854211774985664,
    "Shifts": 1,
-   "LastShift": 5630504.260446624
+   "LastShift": 5621175.660569794
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -310,16 +310,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814247347065,
-   "longitude": -143.9715490817792,
-   "altitude": 636.3379596761661,
-   "heightFromTerrain": 0.25543883442878723,
-   "surfaceSpeed": 0.00023554915631089984,
-   "heading": 31.818585599056007,
-   "pitch": 89.93135621236546,
+   "latitude": -5.440814215003591,
+   "longitude": -143.97154907972018,
+   "altitude": 636.3477228374686,
+   "heightFromTerrain": 0.25547969341278076,
+   "surfaceSpeed": 4.164975759262281e-09,
+   "heading": 57.04272202780092,
+   "pitch": 89.95130520316981,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058057647875278,
+   "localTime": 0.4057640981265871,
    "solarDay": 21599.999999999996
   }
  },
@@ -327,16 +327,16 @@
   "view": "warp-05",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.59322903889,
+   "UniversalTime": 44999.514135411126,
    "RotatingFrame": true,
-   "DirectRotAngle": -159.54622438106128,
-   "InverseRotAngle": 281.31632612681756,
+   "DirectRotAngle": -18.00615564782163,
+   "InverseRotAngle": 139.75823029064156,
    "SphereOrigin": {
-    "x": -330174.53125,
+    "x": 568593.375,
     "y": 56950.82421875,
-    "z": -498503.1875
+    "z": 184991.84375
    },
-   "OriginDistance": 0.03969090965715407,
+   "OriginDistance": 0.18542738016020177,
    "Shifts": 0,
    "LastShift": null
   },
@@ -346,16 +346,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814233782743,
-   "longitude": -143.97154906950547,
-   "altitude": 636.3379942927277,
-   "heightFromTerrain": 0.2554655075073242,
-   "surfaceSpeed": 0.0036543936407420377,
-   "heading": 34.60673465619957,
-   "pitch": 89.95590769606083,
+   "latitude": -5.440814211323245,
+   "longitude": -143.97154907859135,
+   "altitude": 636.3477288369322,
+   "heightFromTerrain": 0.2554812431335449,
+   "surfaceSpeed": 0.0014954661314675742,
+   "heading": 65.2353869353509,
+   "pitch": 89.94576067841817,
    "brakes": false,
    "sas": false,
-   "localTime": 0.43369514185045765,
+   "localTime": 0.43364425786097066,
    "solarDay": 21599.999999999996
   }
  },
@@ -363,18 +363,18 @@
   "view": "load-05",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.16268521603,
+   "UniversalTime": 44397.30268521617,
    "RotatingFrame": true,
-   "DirectRotAngle": -169.8475198397266,
-   "InverseRotAngle": 281.5535482316186,
+   "DirectRotAngle": -28.288755772269496,
+   "InverseRotAngle": 139.98041719161722,
    "SphereOrigin": {
-    "x": -413997,
+    "x": 592483.25,
     "y": 56950.82421875,
-    "z": -431424.5625
+    "z": 80524.9453125
    },
-   "OriginDistance": 0.08129333966914784,
+   "OriginDistance": 0.07220028915111057,
    "Shifts": 1,
-   "LastShift": 5631422.963295065
+   "LastShift": 5621210.826442389
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -382,16 +382,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814422286117,
-   "longitude": -143.97154923743898,
-   "altitude": 636.2989584933966,
-   "heightFromTerrain": 0.2555084526538849,
-   "surfaceSpeed": 2.1399540106820965e-08,
-   "heading": 31.225042596568265,
-   "pitch": 89.93587829541636,
+   "latitude": -5.440814315272651,
+   "longitude": -143.97154915401745,
+   "altitude": 636.3225961510325,
+   "heightFromTerrain": 0.2554486393928528,
+   "surfaceSpeed": 0.000140631018666132,
+   "heading": 44.3127407350148,
+   "pitch": 89.9462157584568,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058057643551394,
+   "localTime": 0.40576502384613183,
    "solarDay": 21599.999999999996
   }
  },
@@ -399,16 +399,16 @@
   "view": "warp-06",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.49196011799,
+   "UniversalTime": 44999.556069004866,
    "RotatingFrame": true,
-   "DirectRotAngle": -169.8475198397266,
-   "InverseRotAngle": 291.615929808964,
+   "DirectRotAngle": -28.288755772269496,
+   "InverseRotAngle": 150.04153094856633,
    "SphereOrigin": {
-    "x": -413997,
+    "x": 592483.25,
     "y": 56950.82421875,
-    "z": -431424.5625
+    "z": 80524.9453125
    },
-   "OriginDistance": 0.08133734083888308,
+   "OriginDistance": 0.07219177339574341,
    "Shifts": 0,
    "LastShift": null
   },
@@ -418,16 +418,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814413690697,
-   "longitude": -143.97154922959817,
-   "altitude": 636.2989451026078,
-   "heightFromTerrain": 0.25548744201660156,
-   "surfaceSpeed": 0.0029435288832750715,
-   "heading": 35.026754143215555,
-   "pitch": 89.98542031198677,
+   "latitude": -5.440814309768029,
+   "longitude": -143.9715491499604,
+   "altitude": 636.3225961368298,
+   "heightFromTerrain": 0.25544285774230957,
+   "surfaceSpeed": 0.0021945330321975335,
+   "heading": 44.399219412615196,
+   "pitch": 89.92867195741405,
    "brakes": false,
    "sas": false,
-   "localTime": 0.43369045302978815,
+   "localTime": 0.43364712495872987,
    "solarDay": 21599.999999999996
   }
  },
@@ -435,18 +435,18 @@
   "view": "load-06",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.16268521603,
+   "UniversalTime": 44397.56268521613,
    "RotatingFrame": true,
-   "DirectRotAngle": -180.1464552905918,
-   "InverseRotAngle": 291.8524836824838,
+   "DirectRotAngle": -38.57205643019415,
+   "InverseRotAngle": 150.26806135286915,
    "SphereOrigin": {
-    "x": -484458.5,
+    "x": 597341.1875,
     "y": 56950.82421875,
-    "z": -350457.5625
+    "z": -26535.794921875
    },
-   "OriginDistance": 0.18255199239939696,
+   "OriginDistance": 0.17763360933708616,
    "Shifts": 1,
-   "LastShift": 5630133.949104854
+   "LastShift": 5621593.665799233
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -454,16 +454,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440813939738359,
-   "longitude": -143.97154862799584,
-   "altitude": 636.4427265954437,
-   "heightFromTerrain": 0.25543642044067383,
-   "surfaceSpeed": 1.66606656436423e-08,
-   "heading": 51.48100905745849,
-   "pitch": 89.96666271825488,
+   "latitude": -5.440814178023404,
+   "longitude": -143.97154901050703,
+   "altitude": 636.3580889709992,
+   "heightFromTerrain": 0.2554168999195099,
+   "surfaceSpeed": 1.5132483228715484e-08,
+   "heading": 31.24230383802063,
+   "pitch": 89.92029846178221,
    "brakes": false,
    "sas": false,
-   "localTime": 0.40580484012211115,
+   "localTime": 0.4057761353558811,
    "solarDay": 21599.999999999996
   }
  },
@@ -471,16 +471,16 @@
   "view": "warp-07",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.5332894637,
+   "UniversalTime": 44999.788818028275,
    "RotatingFrame": true,
-   "DirectRotAngle": -180.1464552905918,
-   "InverseRotAngle": 301.9155556988701,
+   "DirectRotAngle": -38.57205643019415,
+   "InverseRotAngle": 160.32871986094392,
    "SphereOrigin": {
-    "x": -484458.5,
+    "x": 597341.1875,
     "y": 56950.82421875,
-    "z": -350457.5625
+    "z": -26535.794921875
    },
-   "OriginDistance": 0.18253984457243977,
+   "OriginDistance": 0.177614638648108,
    "Shifts": 0,
    "LastShift": null
   },
@@ -490,16 +490,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440813925340496,
-   "longitude": -143.97154861952893,
-   "altitude": 636.4427758000093,
-   "heightFromTerrain": 0.2554742991924286,
-   "surfaceSpeed": 0.0032091767914795505,
-   "heading": 67.71237333528266,
-   "pitch": 89.95390057785188,
+   "latitude": -5.440814164399956,
+   "longitude": -143.971548998213,
+   "altitude": 636.3581220875494,
+   "heightFromTerrain": 0.2554413676261902,
+   "surfaceSpeed": 0.0036718174508156122,
+   "heading": 34.46729903511382,
+   "pitch": 89.95309786780086,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4336923681200598,
+   "localTime": 0.4336588267239266,
    "solarDay": 21599.999999999996
   }
  },
@@ -507,18 +507,18 @@
   "view": "load-07",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.16268521603,
+   "UniversalTime": 44397.082685216206,
    "RotatingFrame": true,
-   "DirectRotAngle": -190.4457470648573,
-   "InverseRotAngle": 302.1517754567493,
+   "DirectRotAngle": -48.85790888000952,
+   "InverseRotAngle": 160.54589502731096,
    "SphereOrigin": {
-    "x": -539311.0625,
+    "x": 583003.1875,
     "y": 56950.82421875,
-    "z": -258194.375
+    "z": -132770.078125
    },
-   "OriginDistance": 0.034119929182769584,
+   "OriginDistance": 0.23584529348833597,
    "Shifts": 1,
-   "LastShift": 5630328.335367752
+   "LastShift": 5622987.489597078
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -526,16 +526,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814011488477,
-   "longitude": -143.9715487421402,
-   "altitude": 636.4192653353093,
-   "heightFromTerrain": 0.2554504871368408,
-   "surfaceSpeed": 1.4900905398571204e-08,
-   "heading": 39.76476138103717,
-   "pitch": 89.94758175330637,
+   "latitude": -5.440814357689127,
+   "longitude": -143.9715491843532,
+   "altitude": 636.313774880371,
+   "heightFromTerrain": 0.25543659925460815,
+   "surfaceSpeed": 3.1465091617355555e-13,
+   "heading": 33.882919158739234,
+   "pitch": 89.9414593714981,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058057657309693,
+   "localTime": 0.4057548385766824,
    "solarDay": 21599.999999999996
   }
  },
@@ -543,16 +543,16 @@
   "view": "warp-08",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.51268521565,
+   "UniversalTime": 44999.28978482523,
    "RotatingFrame": true,
-   "DirectRotAngle": -190.4457470648573,
-   "InverseRotAngle": 312.21450326305876,
+   "DirectRotAngle": -48.85790888000952,
+   "InverseRotAngle": 170.60623557084307,
    "SphereOrigin": {
-    "x": -539311.0625,
+    "x": 583003.1875,
     "y": 56950.82421875,
-    "z": -258194.375
+    "z": -132770.078125
    },
-   "OriginDistance": 0.03410876795925799,
+   "OriginDistance": 0.23584357942640144,
    "Shifts": 0,
    "LastShift": null
   },
@@ -562,16 +562,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814000830383,
-   "longitude": -143.97154873461918,
-   "altitude": 636.4192423790228,
-   "heightFromTerrain": 0.2554185688495636,
-   "surfaceSpeed": 0.002931095819097476,
-   "heading": 42.87605439146503,
-   "pitch": 89.92144451176218,
+   "latitude": -5.440814353234813,
+   "longitude": -143.97154917994948,
+   "altitude": 636.3137479911093,
+   "heightFromTerrain": 0.25540587306022644,
+   "surfaceSpeed": 0.002275333597415119,
+   "heading": 32.3836643648127,
+   "pitch": 89.92102212745459,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4336923398259179,
+   "localTime": 0.43363479690414747,
    "solarDay": 21599.999999999996
   }
  },
@@ -579,18 +579,18 @@
   "view": "load-08",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.10268521604,
+   "UniversalTime": 44397.342685216165,
    "RotatingFrame": true,
-   "DirectRotAngle": -200.7456969759677,
-   "InverseRotAngle": 312.45072302093797,
+   "DirectRotAngle": -59.13676105247089,
+   "InverseRotAngle": 170.82909070309972,
    "SphereOrigin": {
-    "x": -576785.75,
+    "x": 549955.125,
     "y": 56950.82421875,
-    "z": -157604.015625
+    "z": -234669.921875
    },
-   "OriginDistance": 0.15894666395301038,
+   "OriginDistance": 0.09576050195197802,
    "Shifts": 1,
-   "LastShift": 5630687.83094211
+   "LastShift": 5619163.473921897
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -598,16 +598,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440813973635657,
-   "longitude": -143.9715486609462,
-   "altitude": 636.4389947968302,
-   "heightFromTerrain": 0.25545740127563477,
-   "surfaceSpeed": 3.725489253707463e-09,
-   "heading": 42.85497690602254,
-   "pitch": 89.95090147505061,
+   "latitude": -5.440814185429102,
+   "longitude": -143.97154902928582,
+   "altitude": 636.3539796839468,
+   "heightFromTerrain": 0.2554178535938263,
+   "surfaceSpeed": 7.68046173028961e-09,
+   "heading": 32.075159984278464,
+   "pitch": 89.93825662768806,
    "brakes": false,
    "sas": false,
-   "localTime": 0.40580206225280513,
+   "localTime": 0.40576687604445993,
    "solarDay": 21599.999999999996
   }
  },
@@ -615,16 +615,16 @@
   "view": "warp-09",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.453168614105,
+   "UniversalTime": 44999.62930142674,
    "RotatingFrame": true,
-   "DirectRotAngle": -200.7456969759677,
-   "InverseRotAngle": 322.5134589027964,
+   "DirectRotAngle": -59.13676105247089,
+   "InverseRotAngle": 180.8907596336452,
    "SphereOrigin": {
-    "x": -576785.75,
+    "x": 549955.125,
     "y": 56950.82421875,
-    "z": -157604.015625
+    "z": -234669.921875
    },
-   "OriginDistance": 0.15894595445351492,
+   "OriginDistance": 0.09571516204223582,
    "Shifts": 0,
    "LastShift": null
   },
@@ -634,16 +634,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440813962993407,
-   "longitude": -143.97154865336717,
-   "altitude": 636.438976009842,
-   "heightFromTerrain": 0.2554309368133545,
-   "surfaceSpeed": 0.0029254847903395363,
-   "heading": 44.76286499826052,
-   "pitch": 89.92467996979528,
+   "latitude": -5.440814162026299,
+   "longitude": -143.9715490094517,
+   "altitude": 636.3540393300354,
+   "heightFromTerrain": 0.25546538829803467,
+   "surfaceSpeed": 0.004417876205959962,
+   "heading": 28.702204511957376,
+   "pitch": 89.97934544170177,
    "brakes": false,
    "sas": false,
-   "localTime": 0.43368958465339796,
+   "localTime": 0.4336514416648591,
    "solarDay": 21599.999999999996
   }
  },
@@ -651,18 +651,18 @@
   "view": "load-09",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.18268521603,
+   "UniversalTime": 44397.342685216165,
    "RotatingFrame": true,
-   "DirectRotAngle": -211.04465261570544,
-   "InverseRotAngle": 322.75101512323795,
+   "DirectRotAngle": -69.4216192309135,
+   "InverseRotAngle": 181.11394888154234,
    "SphereOrigin": {
-    "x": -595669.6875,
+    "x": 499220.0625,
     "y": 56950.82421875,
-    "z": -51944.41015625
+    "z": -329089.34375
    },
-   "OriginDistance": 0.20926341510567475,
+   "OriginDistance": 0.24949764911365482,
    "Shifts": 1,
-   "LastShift": 5630144.901745647
+   "LastShift": 5622444.481583238
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -670,16 +670,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814396110857,
-   "longitude": -143.97154922134206,
-   "altitude": 636.2985497006448,
-   "heightFromTerrain": 0.2554403841495514,
-   "surfaceSpeed": 2.6344393445130703e-09,
-   "heading": 43.320363228608784,
-   "pitch": 89.94014181601929,
+   "latitude": -5.440814173811223,
+   "longitude": -143.97154902087124,
+   "altitude": 636.3606685118284,
+   "heightFromTerrain": 0.25546279549598694,
+   "surfaceSpeed": 2.5736952517654053e-13,
+   "heading": 45.15909807605784,
+   "pitch": 89.93784510996365,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058066903257789,
+   "localTime": 0.40576687606783385,
    "solarDay": 21599.999999999996
   }
  },
@@ -687,16 +687,16 @@
   "view": "warp-10",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.552322666816,
+   "UniversalTime": 44999.572685215804,
    "RotatingFrame": true,
-   "DirectRotAngle": -211.04465261570544,
-   "InverseRotAngle": 332.8140709885263,
+   "DirectRotAngle": -69.4216192309135,
+   "InverseRotAngle": 191.17467199400835,
    "SphereOrigin": {
-    "x": -595669.6875,
+    "x": 499220.0625,
     "y": 56950.82421875,
-    "z": -51944.41015625
+    "z": -329089.34375
    },
-   "OriginDistance": 0.20928142461559168,
+   "OriginDistance": 0.24949933377035977,
    "Shifts": 0,
    "LastShift": null
   },
@@ -706,16 +706,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814380982515,
-   "longitude": -143.9715492087182,
-   "altitude": 636.2985932552256,
-   "heightFromTerrain": 0.25547486543655396,
-   "surfaceSpeed": 0.003612663701197135,
-   "heading": 24.066359235461317,
-   "pitch": 89.97861310151197,
+   "latitude": -5.440814170665321,
+   "longitude": -143.9715490192542,
+   "altitude": 636.3606877401471,
+   "heightFromTerrain": 0.2554797828197479,
+   "surfaceSpeed": 0.0016851104183257886,
+   "heading": 48.59976386175767,
+   "pitch": 89.93369086237333,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4336941735761591,
+   "localTime": 0.4336469686649016,
    "solarDay": 21599.999999999996
   }
  },
@@ -723,18 +723,18 @@
   "view": "load-10",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.18268521603,
+   "UniversalTime": 44397.38268521616,
    "RotatingFrame": true,
-   "DirectRotAngle": -221.3452647014352,
-   "InverseRotAngle": 333.0516272089677,
+   "DirectRotAngle": -79.7058657069174,
+   "InverseRotAngle": 191.39886358882734,
    "SphereOrigin": {
-    "x": -595357.625,
+    "x": 432446.78125,
     "y": 56950.82421875,
-    "z": 55405.671875
+    "z": -412929.21875
    },
-   "OriginDistance": 0.31531868655287143,
+   "OriginDistance": 0.13739583358737206,
    "Shifts": 1,
-   "LastShift": 5631050.101316477
+   "LastShift": 5622109.835160818
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -742,16 +742,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.4408141482849794,
-   "longitude": -143.9715490154629,
-   "altitude": 636.456018039491,
-   "heightFromTerrain": 0.2554248869419098,
-   "surfaceSpeed": 2.6341378627965795e-09,
-   "heading": 43.699470416090165,
-   "pitch": 89.9511163734572,
+   "latitude": -5.440814294103347,
+   "longitude": -143.9715491294173,
+   "altitude": 636.3276791130193,
+   "heightFromTerrain": 0.25538042187690735,
+   "surfaceSpeed": 3.352727163335703e-08,
+   "heading": 36.69460248260594,
+   "pitch": 89.92943634410952,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058057649717396,
+   "localTime": 0.40576780169224297,
    "solarDay": 21599.999999999996
   }
  },
@@ -759,16 +759,16 @@
   "view": "warp-11",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.49401456137,
+   "UniversalTime": 44999.6580025986,
    "RotatingFrame": true,
-   "DirectRotAngle": -221.3452647014352,
-   "InverseRotAngle": 343.11370899175586,
+   "DirectRotAngle": -79.7058657069174,
+   "InverseRotAngle": 201.46034376361263,
    "SphereOrigin": {
-    "x": -595357.625,
+    "x": 432446.78125,
     "y": 56950.82421875,
-    "z": 55405.671875
+    "z": -412929.21875
    },
-   "OriginDistance": 0.31533605454829283,
+   "OriginDistance": 0.13738324402088606,
    "Shifts": 0,
    "LastShift": null
   },
@@ -778,16 +778,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.440814140978212,
-   "longitude": -143.97154901083047,
-   "altitude": 636.4560489191208,
-   "heightFromTerrain": 0.25544804334640503,
-   "surfaceSpeed": 0.0021846981504396613,
-   "heading": 49.074845542804034,
-   "pitch": 89.94228728654436,
+   "latitude": -5.440814279124157,
+   "longitude": -143.9715491174319,
+   "altitude": 636.3277246241923,
+   "heightFromTerrain": 0.2554127275943756,
+   "surfaceSpeed": 0.0029279349211705358,
+   "heading": 36.315929184877184,
+   "pitch": 89.9370256561899,
    "brakes": false,
    "sas": false,
-   "localTime": 0.43369054875059565,
+   "localTime": 0.43365184419694475,
    "solarDay": 21599.999999999996
   }
  },
@@ -795,18 +795,18 @@
   "view": "load-11",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.16268521603,
+   "UniversalTime": 44397.38268521616,
    "RotatingFrame": true,
-   "DirectRotAngle": -231.64423447338368,
-   "InverseRotAngle": 343.3502628652757,
+   "DirectRotAngle": -89.99053512959995,
+   "InverseRotAngle": 201.6835330115099,
    "SphereOrigin": {
-    "x": -575859.75,
+    "x": 351774.65625,
     "y": 56950.82421875,
-    "z": 160954.078125
+    "z": -483503.21875
    },
-   "OriginDistance": 0.13569200353575062,
+   "OriginDistance": 0.16657962616255562,
    "Shifts": 1,
-   "LastShift": 5630152.233477941
+   "LastShift": 5622341.196147163
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -814,16 +814,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.44081413759416,
-   "longitude": -143.97154900299293,
-   "altitude": 636.3545319918776,
-   "heightFromTerrain": 0.2554323077201843,
-   "surfaceSpeed": 4.1642639749094596e-09,
-   "heading": 53.18786470037501,
-   "pitch": 89.92825531542164,
+   "latitude": -5.440814294480729,
+   "longitude": -143.97154912991977,
+   "altitude": 636.3304517600918,
+   "heightFromTerrain": 0.25541961193084717,
+   "surfaceSpeed": 1.5360289276498903e-08,
+   "heading": 36.36322612009064,
+   "pitch": 89.95291167910496,
    "brakes": false,
    "sas": false,
-   "localTime": 0.4058057650063785,
+   "localTime": 0.4057687276167727,
    "solarDay": 21599.999999999996
   }
  },
@@ -831,16 +831,16 @@
   "view": "warp-12",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 45000.53196011799,
+   "UniversalTime": 44999.65123502048,
    "RotatingFrame": true,
-   "DirectRotAngle": -231.64423447338368,
-   "InverseRotAngle": 353.41331267390217,
+   "DirectRotAngle": -89.99053512959995,
+   "InverseRotAngle": 211.7449001286103,
    "SphereOrigin": {
-    "x": -575859.75,
+    "x": 351774.65625,
     "y": 56950.82421875,
-    "z": 160954.078125
+    "z": -483503.21875
    },
-   "OriginDistance": 0.13571194839724776,
+   "OriginDistance": 0.16656029190310195,
    "Shifts": 0,
    "LastShift": null
   },
@@ -850,16 +850,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.44081412565758,
-   "longitude": -143.97154899484536,
-   "altitude": 636.3545909970999,
-   "heightFromTerrain": 0.25548434257507324,
-   "surfaceSpeed": 0.003024902928257348,
-   "heading": 62.709625563222204,
-   "pitch": 89.98969878575166,
+   "latitude": -5.440814288916852,
+   "longitude": -143.97154912537118,
+   "altitude": 636.3305004445137,
+   "heightFromTerrain": 0.2554625868797302,
+   "surfaceSpeed": 0.00220337618881063,
+   "heading": 36.91347890768289,
+   "pitch": 89.93514040163384,
    "brakes": false,
    "sas": false,
-   "localTime": 0.433692305533731,
+   "localTime": 0.43365153086108926,
    "solarDay": 21599.999999999996
   }
  },
@@ -867,18 +867,18 @@
   "view": "load-12",
   "floatingOrigin": {
    "HasBody": true,
-   "UniversalTime": 44398.222685216024,
+   "UniversalTime": 44397.342685216165,
    "RotatingFrame": true,
-   "DirectRotAngle": -241.9441722711706,
-   "InverseRotAngle": 353.6512030099842,
+   "DirectRotAngle": -100.27575972587874,
+   "InverseRotAngle": 211.96808937650758,
    "SphereOrigin": {
-    "x": -537801.125,
+    "x": 259793.34375,
     "y": 56950.82421875,
-    "z": 261324.75
+    "z": -538542.5
    },
-   "OriginDistance": 0.15562256136204933,
+   "OriginDistance": 0.08389599076679392,
    "Shifts": 1,
-   "LastShift": 5630681.3363262825
+   "LastShift": 5622644.674113892
   },
   "vessel": {
    "id": "8771fa6b-c535-4394-9b6f-78d11095385c",
@@ -886,16 +886,16 @@
    "situation": "LANDED",
    "packed": false,
    "body": "Kerbin",
-   "latitude": -5.44081414838979,
-   "longitude": -143.97154897589155,
-   "altitude": 636.3644410322886,
-   "heightFromTerrain": 0.2554563581943512,
-   "surfaceSpeed": 5.983765524725669e-13,
-   "heading": 34.98773943678819,
-   "pitch": 89.94114006821314,
+   "latitude": -5.440814223941735,
+   "longitude": -143.9715490771849,
+   "altitude": 636.3437525386689,
+   "heightFromTerrain": 0.25546953082084656,
+   "surfaceSpeed": 4.001813022207649e-13,
+   "heading": 41.77045491225552,
+   "pitch": 89.94941573880593,
    "brakes": false,
    "sas": false,
-   "localTime": 0.40580761693351186,
+   "localTime": 0.4057659499854811,
    "solarDay": 21599.999999999996
   }
  }
