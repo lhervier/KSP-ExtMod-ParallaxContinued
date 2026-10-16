@@ -8,28 +8,12 @@ must follow the rocks drawn. A point moves to [Non-regression tests](non-regress
 
 ## Summary
 
-- **Sigma Dimensions** — a body of another size, and quads of another scale.
 - **A kerbal on a rock** — the consequence of the rocks that turn: a kerbal saved on a rock, loaded
   again after an hour of time warp, and after a restart of KSP: moved without the change, put back where
   he was with it; on the Mun and on Eve.
 - **OpenGL, on Linux** — the GLSL variant of the compute shader.
 - **Performance** — the time of a frame in a dense scatter, without the change and with it.
 - **Out of reach** — macOS, Linux under Vulkan.
-
-## Sigma Dimensions
-
-**If the change broke it**: on bodies rescaled by Sigma Dimensions, the rocks would be drawn wrong,
-stretched or tilted, or their colliders would part from them.
-
-**Why**: the change takes the rotation of the quad out of its matrix by dividing by the length of one of
-its axes: it assumes the scale of a quad is the same along its three axes. Sigma Dimensions changes the
-size of the bodies, and Parallax Continued has code of its own for it.
-
-**To play**: [The rocks turn at every load](reproducing-the-bug.md#the-rocks-turn-at-every-load),
-[The colliders on the scatter](non-regression/the-colliders-on-the-scatter.md) and
-[A kerbal on a rock](#a-kerbal-on-a-rock) on the Mun rescaled by Sigma Dimensions, on both builds.
-
-**Where it stands**: not played. Sigma Dimensions is still to try.
 
 ## A kerbal on a rock
 

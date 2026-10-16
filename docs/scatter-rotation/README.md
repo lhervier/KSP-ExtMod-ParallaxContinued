@@ -37,7 +37,7 @@ floating origin that moves, the frame that changes.
 
 ## Work in progress
 
-**Still to check: Sigma Dimensions, a kerbal on a rock, OpenGL on Linux, and performance.**
+**Still to check: a kerbal on a rock, OpenGL on Linux, and performance.**
 
 **→ Full page: [Work in progress](work-in-progress.md)**
 

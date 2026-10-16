@@ -102,9 +102,9 @@ not work.
 LODs, the colliders' lifetime. Neither the `Distribute` kernels nor the C# that places objects are
 touched; of the compiled compute shader, only the four `Evaluate` kernels change.
 
-**What it assumes**: the quad's scale is uniform. That holds for the stock bodies; a mod that rescales a
-body with a non-uniform scale would break that assumption
-([Work in progress](work-in-progress.md#sigma-dimensions)).
+**What it assumes**: the quad's scale is uniform. That holds for every body: KSP never scales the
+transform of a quad, and the mods that resize a body (Kopernicus, Real Solar System) change its radius,
+not that transform.
 
 ## The second commit: near the south pole
 
