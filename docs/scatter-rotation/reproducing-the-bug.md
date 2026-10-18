@@ -247,7 +247,7 @@ differently at every load ([Why it is different at every load](https://github.co
 a plant that sits right on one of the thresholds of `Distribute` grows at one load and not at the next.
 With [KSP TerrainPrecisionFix](https://github.com/lhervier/KSP-TerrainPrecisionFix), which builds the
 ground of stock KSP the same at every load, the same plants grow every time: shown there,
-[With this mod, its scatter grows the same at every load](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/work-in-progress/parallax/its-terrain-and-its-scatter.md#with-this-mod-its-scatter-grows-the-same-at-every-load).
+[Parallax: its scatter grows the same at every load](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/non-regression/parallax/its-scatter-grows-the-same-at-every-load.md).
 
 ## What it does to a craft
 
